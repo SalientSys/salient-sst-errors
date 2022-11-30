@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017", // NODE version 8 and up
+    "outDir": "./dist",
+    "declaration": true,
+    "experimentalDecorators": true
+  },
+  "include": ["src/**/*", "./index.ts"]
+}
