@@ -7,13 +7,19 @@ import { Middlewares } from '../shared';
 
 export const getExceptionHandler = (
   middleware: Middlewares,
-  res: { locals: { errorOrigin: number } },
+  errorOrigin: number,
   next: (...args: unknown[]) => void,
 ) => {
-  const hades = new Hades(res.locals.errorOrigin, middleware);
+  const hades = new Hades(errorOrigin, middleware);
   const baseExceptions = new BaseExceptions(hades, next);
   const userExceptions = new UserExceptions(hades, next);
   const organizationExceptions = new OrganizationExceptions(hades, next);
 
-  return new Exceptions(baseExceptions, userExceptions, organizationExceptions);
+  return new Exceptions(
+    baseExceptions,
+    userExceptions,
+    organizationExceptions,
+    hades,
+    next,
+  );
 };

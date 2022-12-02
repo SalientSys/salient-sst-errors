@@ -1,6 +1,7 @@
 import { UserExceptions } from './user-exceptions';
 import { BaseExceptions } from './base-exceptions';
 import { OrganizationExceptions } from './organization-exceptions';
+import { Hades } from './hades';
 
 enum OrganizationType {
   Integrator = 'integrator',
@@ -13,6 +14,8 @@ class Exceptions<NextFunction> {
     private baseExceptions: BaseExceptions<NextFunction>,
     private userExceptions: UserExceptions<NextFunction>,
     private organizationExceptions: OrganizationExceptions<NextFunction>,
+    public hades: Hades,
+    public next: NextFunction,
   ) {}
 
   /** Base Errors Start **/

@@ -1,6 +1,10 @@
-import { RouteNames } from './enums';
+import { DefaultErrorCodes, RouteNames } from './enums';
 
-export const routesMap = Object.values(RouteNames).reduce((acc, val, i) => {
+const routesMap = Object.values(RouteNames).reduce((acc, val, i) => {
   acc[val] = i + 100;
   return acc;
 }, {} as Record<string, number>);
+
+routesMap['/default-error-code-route'] = DefaultErrorCodes.ErrorOrigin;
+
+export { routesMap };
