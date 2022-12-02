@@ -9,6 +9,7 @@ import {
 
 export class BaseExceptions<NextFunction> {
   constructor(public hades: Hades, public next: NextFunction) {}
+
   @Next
   notFound(entity: string, service: Services) {
     return this.hades.err(
@@ -61,7 +62,6 @@ export class BaseExceptions<NextFunction> {
     );
   }
 
-  // Secret token
   @Next
   secretTokenNotFound() {
     return this.hades.err(

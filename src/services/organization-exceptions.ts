@@ -93,4 +93,18 @@ export class OrganizationExceptions<NextFunction> {
       ErrorReasons.OrganizationsAlreadyAssociated,
     );
   }
+
+  /**
+   * Service: OrganizationService
+   * Reason: OrganizationNotIntegratorNorEndUser
+   * Status: 403
+   */
+  @Next
+  userNotIntegratorNorEndUser() {
+    return this.hades.err(
+      Services.OrganizationService,
+      HttpStatusCode.Forbidden,
+      ErrorReasons.UserNotIntegratorNorEndUser,
+    );
+  }
 }

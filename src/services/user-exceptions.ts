@@ -95,16 +95,7 @@ export class UserExceptions<NextFunction> {
   }
 
   @Next
-  userNotIntegratorNorEndUser() {
-    return this.hades.err(
-      Services.OrganizationService,
-      HttpStatusCode.Forbidden,
-      ErrorReasons.UserNotIntegratorNorEndUser,
-    );
-  }
-
-  @Next
-  invalidAccessCode(message?: string) {
+  invalidAccessCode() {
     return this.hades.err(
       Services.UsersService,
       HttpStatusCode.Unauthorized,
