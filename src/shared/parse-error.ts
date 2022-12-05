@@ -4,20 +4,10 @@ const FULL_CODE_LENGTH = 13;
 const ROUTE_CODE_LENGTH_END = 3;
 const MIDDLEWARE_LENGTH_END = 8;
 
-const getErrorMessage = (code: string): string =>
-  code.length < ROUTE_CODE_LENGTH_END
-    ? 'Route code is missing.'
-    : code.length < MIDDLEWARE_LENGTH_END
-    ? 'Middleware code is missing.'
-    : code.length < FULL_CODE_LENGTH
-    ? 'Service code is missing.'
-    : '';
-
 export function parseErrorCode(code: number): {
   route: { name: string; code: number };
   middleware: { name: string; code: number };
   service: { name: string; code: number };
-  error: string;
 } {
   const stringified = code.toString();
   if (stringified.length !== FULL_CODE_LENGTH) {
@@ -25,7 +15,6 @@ export function parseErrorCode(code: number): {
       route: { name: '', code: -1 },
       middleware: { name: '', code: -1 },
       service: { name: '', code: -1 },
-      error: getErrorMessage(stringified),
     };
   }
 
@@ -57,6 +46,5 @@ export function parseErrorCode(code: number): {
       name: serviceName,
       code: serviceCode,
     },
-    error: '',
   };
 }

@@ -4,6 +4,7 @@ import {
   generateErrorCode,
   HttpStatusCode,
   ErrorReasons,
+  DefaultErrorCodes,
 } from '../shared';
 import { HttpException } from '../shared/exceptions';
 
@@ -29,8 +30,8 @@ export class Hades {
     middleware: Middlewares = this.middleware,
   ) {
     const errorCode = generateErrorCode(
-      this.errorOrigin,
-      middleware ?? this.middleware,
+      this.errorOrigin ?? DefaultErrorCodes.Route,
+      middleware ?? this.middleware ?? DefaultErrorCodes.Middleware,
       service,
     );
     return new HttpException(status, errorCode, reason);
