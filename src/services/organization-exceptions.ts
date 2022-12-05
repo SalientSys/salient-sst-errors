@@ -3,7 +3,7 @@ import { OrganizationType } from './exception-handler';
 import { Next, Services, HttpStatusCode, ErrorReasons } from '../shared';
 
 export class OrganizationExceptions<NextFunction> {
-  constructor(public hades: Hades, public next: NextFunction) {}
+  constructor(public hades?: Hades, public next?: NextFunction) {}
 
   @Next
   notAssociatedWithDeployment() {
@@ -94,11 +94,6 @@ export class OrganizationExceptions<NextFunction> {
     );
   }
 
-  /**
-   * Service: OrganizationService
-   * Reason: OrganizationNotIntegratorNorEndUser
-   * Status: 403
-   */
   @Next
   userNotIntegratorNorEndUser() {
     return this.hades.err(

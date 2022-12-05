@@ -8,7 +8,12 @@ import {
 } from '../shared';
 
 export class BaseExceptions<NextFunction> {
-  constructor(public hades: Hades, public next: NextFunction) {}
+  constructor(public hades?: Hades, public next?: NextFunction) {}
+
+  @Next
+  customError(service: Services, status: HttpStatusCode, reason: string) {
+    return this.hades.err(service, status, reason);
+  }
 
   @Next
   notFound(entity: string, service: Services) {

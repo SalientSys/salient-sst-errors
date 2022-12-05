@@ -2,7 +2,7 @@ import { Hades } from './hades';
 import { Next, Services, HttpStatusCode, ErrorReasons } from '../shared';
 
 export class UserExceptions<NextFunction> {
-  constructor(public hades: Hades, public next: NextFunction) {}
+  constructor(public hades?: Hades, public next?: NextFunction) {}
 
   @Next
   noToken() {
@@ -86,7 +86,10 @@ export class UserExceptions<NextFunction> {
   }
 
   @Next
-  notPermittedTo(action: 'create' | 'update' = 'create', objectType: string) {
+  notPermittedTo(
+    action: 'create' | 'update' | 'delete' | 'read' = 'create',
+    objectType: string,
+  ) {
     return this.hades.err(
       Services.UsersService, // Permissions service at some point
       HttpStatusCode.Forbidden,

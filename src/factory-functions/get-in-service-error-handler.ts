@@ -1,6 +1,8 @@
 import { ServiceExceptions } from '../services/service-exceptions';
 
-export const errorHandler = () => {
+const getErrorHandler = () => {
   const serviceExceptions = new ServiceExceptions();
   return serviceExceptions;
 };
+
+export const errorHandler = getErrorHandler();

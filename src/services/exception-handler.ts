@@ -2,6 +2,7 @@ import { UserExceptions } from './user-exceptions';
 import { BaseExceptions } from './base-exceptions';
 import { OrganizationExceptions } from './organization-exceptions';
 import { Hades } from './hades';
+import { Middlewares } from '../shared';
 
 enum OrganizationType {
   Integrator = 'integrator',
@@ -14,11 +15,27 @@ class Exceptions<NextFunction> {
     private baseExceptions: BaseExceptions<NextFunction>,
     private userExceptions: UserExceptions<NextFunction>,
     private organizationExceptions: OrganizationExceptions<NextFunction>,
-    public hades: Hades,
-    public next: NextFunction,
+    public hades?: Hades,
+    public next?: NextFunction,
   ) {}
 
+  // like a constructor but it's for the case where we don't have a next function or a hades instances yet.
+  setup(middleware: Middlewares, errorCode: number, next: NextFunction) {
+    this.hades = new Hades(errorCode, middleware);
+    this.next = next;
+  }
+
+  // destroy the hades instance and next function, when we're done with them. so the next time we call setup, we can create new ones.
+  destroy() {
+    this.hades = undefined;
+    this.next = undefined;
+  }
+
   /** Base Errors Start **/
+  /**
+   * Use when you have no other choice
+   */
+  customError = this.baseExceptions.customError;
   /**
    * Service: @param service
    * Reason: @param entity was not found

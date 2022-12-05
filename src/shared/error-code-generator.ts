@@ -3,10 +3,10 @@ import { routesMap } from './routes-map';
 
 const generateErrorCode = (
   route: number,
-  middleware?: Middlewares,
-  service?: Services,
+  middleware: Middlewares,
+  service: Services,
 ) => {
-  return parseInt(`${route}${middleware ?? ''}${service ?? ''}`);
+  return parseInt(`${route}${middleware}${service}`);
 };
 
 const generateErrorOriginCode = (route: RouteNames) => routesMap[route];

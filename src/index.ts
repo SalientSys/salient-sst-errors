@@ -1,2 +1,3 @@
 export * from './shared';
 export * from './factory-functions';
+export * from './services';
