@@ -4,4 +4,4 @@ export * from './error-code-generator';
 export * from './exceptions';
 export * from './interfaces';
 export * from './index-map';
-export * from './transform-error';
+export * from './parse-error';
