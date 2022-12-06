@@ -8,7 +8,7 @@ const organizationExceptions = new OrganizationExceptions();
 /**
  * The Global Exception Handler, Connecting all the services into one neatly packaged object.
  */
-export const xH = new Exceptions(
+export const exH = new Exceptions(
   baseExceptions,
   userExceptions,
   organizationExceptions,

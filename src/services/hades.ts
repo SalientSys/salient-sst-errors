@@ -16,7 +16,6 @@ export class Hades {
   constructor(private errorOrigin: number, public middleware: number) {}
 
   /**
-   *
    * @param service The service the error originated from(e.g UsersService) Uses Services Enum
    * @param status The Status Code of the Error: Uses HttpStatusCodes Enum
    * @param reason The Reason behind the error: Uses ErrorReasons Enum
