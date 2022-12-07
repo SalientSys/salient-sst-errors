@@ -1,4 +1,4 @@
-import { routesMap, Middlewares, Services, indexMap } from '.';
+import { routeMap, Middleware, Service, indexMap } from '.';
 
 const FULL_CODE_LENGTH = 13;
 const ROUTE_CODE_LENGTH_END = 3;
@@ -26,15 +26,15 @@ export function parseErrorCode(code: number): {
     stringified.substring(MIDDLEWARE_LENGTH_END, FULL_CODE_LENGTH),
   );
 
-  const routeName = Object.keys(routesMap).find(
-    (key) => indexMap(routesMap, key) === routeCode,
+  const routeName = Object.keys(routeMap).find(
+    (key) => indexMap(routeMap, key) === routeCode,
   );
-  const middlewareName = Object.keys(Middlewares).find(
-    (key: keyof typeof Middlewares) =>
-      indexMap(Middlewares, key) === middlewareCode,
+  const middlewareName = Object.keys(Middleware).find(
+    (key: keyof typeof Middleware) =>
+      indexMap(Middleware, key) === middlewareCode,
   );
-  const serviceName = Object.keys(Services).find(
-    (key: keyof typeof Services) => indexMap(Services, key) === serviceCode,
+  const serviceName = Object.keys(Service).find(
+    (key: keyof typeof Service) => indexMap(Service, key) === serviceCode,
   );
   return {
     route: { name: routeName, code: routeCode },

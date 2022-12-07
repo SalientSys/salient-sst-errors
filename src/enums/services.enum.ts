@@ -1,4 +1,4 @@
-export enum Services {
+export enum Service {
   Server = 10001,
   ValidationService = 10002,
   UsersService = 10003,
@@ -15,4 +15,9 @@ export enum Services {
   RequestHeadersService = 10014,
   EmailService = 10015,
   RequestParametersService = 10016,
+  RequestBodyService = 10017,
+  RecorderService = 10018,
+  Env0Service = 10019,
+  GatewayService = 10020,
+  OrgConnectionService = 10020,
 }

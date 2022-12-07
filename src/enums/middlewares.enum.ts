@@ -1,4 +1,4 @@
-export enum Middlewares {
+export enum Middleware {
   ValidationMiddleware = 10001,
   LoginRequestHandler = 10002,
   UpdatePasswordResetHandler = 10003,
@@ -66,7 +66,7 @@ export enum Middlewares {
   UpdateByIdMiddleware = 10067,
   VerifyUserBelongsToAnOrganizationMiddleware = 10068,
   GetOrganizationOfCurrentUserHandler = 10069,
-  RegisterOrganization = 10070,
+  RegisterOrganizationHandler = 10070,
   DisassociateEndUserFromIntegratorOrganizationHandler = 10071,
   GetAllOrganizationsByTypeHandler = 10072,
   GetNotificationsHandler = 10073,

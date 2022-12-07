@@ -1,4 +1,4 @@
-export enum ErrorReasons {
+export enum ErrorReason {
   DefaultValidationError = 'Errors occurred during response body validation',
   UserNotFound = 'User does not exist!',
   UserNotVerified = 'User is not verified!',
@@ -10,13 +10,11 @@ export enum ErrorReasons {
   UserNotAdmin = 'User must be an admin for this action',
   BadToken = 'Bad Auth Data',
   NoToken = 'No Auth Data',
-  Duplicate = 'Item is already in use',
   UserAlreadyVerified = 'User with requested email has already been verified',
   RegistrationExpired = 'Registration expired',
   UserNotInOrganization = 'User does not belong to an organization',
   SelfInvite = 'Invite to self cannot be done',
   UserNotIntegratorNorEndUser = 'User is not an integrator nor an end-user!',
-  EndUserNotAssociatedWithIntegrator = 'End-user is not associated with integrator organization.',
   NotificationDoesNotBelongToUser = `Notification doesn't belong to this user`,
   RecipientAlreadyInOrg = `User is already in an organization`,
   OrganizationHasNoDeployments = `Organization has no deployment.`,
@@ -39,4 +37,7 @@ export enum ErrorReasons {
   EmailDeliveryFailed = `Email could not be delivered!`,
   EmailLimitExceeded = `Email limit is exceeded`,
   SuspiciousRequestor = 'Requestor is marked as suspicious!',
+  NotFound = 'Not Found',
+  UserNotInSalient = 'User is not in Salient organization',
+  BadLogin = 'Incorrect username or password',
 }

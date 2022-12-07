@@ -1,4 +1,4 @@
-export enum RouteNames {
+export enum RouteName {
   AuthenticationLogin = '[POST]/authentication/login',
   AuthenticationSendPasswordEmail = '[POST]/authentication/send-password-email',
   AuthenticationVerifyPasswordReset = '[POST]/authentication/password',
@@ -20,10 +20,7 @@ export enum RouteNames {
   GetDeploymentInstancesByIdParam1 = '[GET]/deployment-instances/:deploymentId/:param1',
   GetDeploymentInstancesByIdParam2 = '[GET]/deployment-instances/:deploymentId/:param1/:param2',
   GetDeploymentInstancesByIdParam3 = '[GET]/deployment-instances/:deploymentId/:param1/:param2/:param3',
-  PostDeploymentByIdInviteIntegrator = '[POST]/deployment-instances/:deploymentId/invite-integrator',
-  PostDeploymentByIdRequestQuote = '[POST]/deployment-instances/:deploymentId/requestQuote', // Ugh not REST
   PostDeploymentRegister = '[POST]/deployment-instances/register',
-  PostDeploymentRequestToBeIntegrator = '[POST]/deployment-instances/request-to-be-integrator',
   PutDeploymentById = '[PUT]/deployment-instances/:deploymentId',
   PutDeploymentByIdGatewayDeploy = '[PUT]/deployment-instances/:deploymentId/gateway/deploy',
   PutDeploymentByIdGatewayReDeploy = '[PUT]/deployment-instances/:deploymentId/gateway/redeploy',
@@ -51,4 +48,6 @@ export enum RouteNames {
   PostOrgConnectionById = '[POST]/org-connections/:organizationConnectionId',
   GetAllOrganizationsByType = '[GET]/organizations/list?type=integrator|end-user|other',
   PutOrganizationByIdDisassociate = '[PUT]/organizations/:organizationId/disassociate',
+  PostDeploymentByIdRequestQuote = '[POST]/deployment-instances/:deploymentId/requestQuote',
+  PatchOrganizationById = '[PATCH]/organizations/:organizationId',
 }
