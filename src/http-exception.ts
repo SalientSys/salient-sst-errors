@@ -4,6 +4,7 @@ import {
   ErrorReason,
   DefaultErrorInfo,
   IErrorContext,
+  generateErrorOriginCode,
 } from '.';
 
 class HttpException {
@@ -18,9 +19,10 @@ class HttpException {
   ) {
     this.status = status;
     this.reason = reason;
+    const routeCode = generateErrorOriginCode(context.route);
 
     const code = generateErrorCode(
-      context.route ?? DefaultErrorInfo.DefaultRoute,
+      routeCode ?? DefaultErrorInfo.DefaultRoute,
       context.middleware,
       context.service,
     );

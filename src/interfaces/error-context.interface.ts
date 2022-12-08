@@ -1,7 +1,7 @@
-import { Middleware, Service } from '../enums';
+import { Middleware, RouteName, Service } from '../enums';
 
 export interface IErrorContext {
-  route: number;
+  route: RouteName;
   middleware: Middleware;
   service?: Service;
 }
