@@ -2,9 +2,9 @@ import { routeMap, Middleware, Service, indexMap } from '.';
 import { IParsedError } from './interfaces/parsed-error.interface';
 
 const FULL_CODE_LENGTH = 13;
-const ROUTE_CODE_LENGTH_END = 3;
-const MIDDLEWARE_LENGTH_END = 8;
-const SERVICE_LENGTH_END = FULL_CODE_LENGTH;
+const ROUTE_CODE_LENGTH = 3;
+const MIDDLEWARE_LENGTH = 5;
+const SERVICE_LENGTH = 5;
 
 export function parseErrorCode(code: number): IParsedError {
   const stringified = code.toString();
@@ -16,12 +16,18 @@ export function parseErrorCode(code: number): IParsedError {
     };
   }
 
-  const routeCode = parseInt(stringified.substring(0, ROUTE_CODE_LENGTH_END));
+  let index = 0;
+
+  const routeCode = parseInt(stringified.substring(0, ROUTE_CODE_LENGTH));
+  index += ROUTE_CODE_LENGTH;
+
   const middlewareCode = parseInt(
-    stringified.substring(ROUTE_CODE_LENGTH_END, MIDDLEWARE_LENGTH_END),
+    stringified.substring(index, MIDDLEWARE_LENGTH),
   );
+  index += MIDDLEWARE_LENGTH;
+
   const serviceCode = parseInt(
-    stringified.substring(MIDDLEWARE_LENGTH_END, SERVICE_LENGTH_END),
+    stringified.substring(MIDDLEWARE_LENGTH, SERVICE_LENGTH),
   );
 
   const routeName = Object.keys(routeMap).find(
