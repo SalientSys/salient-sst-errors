@@ -6,14 +6,17 @@ const ROUTE_CODE_LENGTH = 3;
 const MIDDLEWARE_LENGTH = 5;
 const SERVICE_LENGTH = 5;
 
-export function parseErrorCode(code: number): IParsedError {
+const PARSING_ERROR =
+  `Invalid error code. Error code must be a number with ${FULL_CODE_LENGTH} digits. For example: 0010010010011.` as const;
+const INVALID_CODE_ERROR =
+  `Invalid error code. Error code must be a number that is included in the related enums.` as const;
+
+export function parseErrorCode(
+  code: number,
+): IParsedError | typeof PARSING_ERROR | typeof INVALID_CODE_ERROR {
   const stringified = code.toString();
   if (stringified.length !== FULL_CODE_LENGTH) {
-    return {
-      route: { name: '', code: -1 },
-      middleware: { name: '', code: -1 },
-      service: { name: '', code: -1 },
-    };
+    return PARSING_ERROR;
   }
 
   let index = 0;
@@ -40,6 +43,7 @@ export function parseErrorCode(code: number): IParsedError {
   const serviceName = Object.keys(Service).find(
     (key: keyof typeof Service) => indexMap(Service, key) === serviceCode,
   );
+  if (!routeName || !middlewareName || !serviceName) return INVALID_CODE_ERROR;
   return {
     route: { name: routeName, code: routeCode },
     middleware: {
