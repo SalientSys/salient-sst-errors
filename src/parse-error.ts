@@ -6,6 +6,8 @@ const ROUTE_CODE_LENGTH = 3;
 const MIDDLEWARE_LENGTH = 5;
 const SERVICE_LENGTH = 5;
 
+const NOT_FOUND_ERROR = `Name not found` as const;
+
 const PARSING_ERROR =
   `Invalid error code. Error code must be a number with ${FULL_CODE_LENGTH} digits. For example: 0010010010011.` as const;
 const INVALID_CODE_ERROR =
@@ -25,12 +27,13 @@ export function parseErrorCode(
   index += ROUTE_CODE_LENGTH;
 
   const middlewareCode = parseInt(
-    stringified.substring(index, MIDDLEWARE_LENGTH),
+    stringified.substring(index, index + MIDDLEWARE_LENGTH),
   );
+
   index += MIDDLEWARE_LENGTH;
 
   const serviceCode = parseInt(
-    stringified.substring(MIDDLEWARE_LENGTH, SERVICE_LENGTH),
+    stringified.substring(index, index + SERVICE_LENGTH),
   );
 
   const routeName = Object.keys(routeMap).find(
@@ -43,15 +46,15 @@ export function parseErrorCode(
   const serviceName = Object.keys(Service).find(
     (key: keyof typeof Service) => indexMap(Service, key) === serviceCode,
   );
-  if (!routeName || !middlewareName || !serviceName) return INVALID_CODE_ERROR;
+  // if (!routeName || !middlewareName || !serviceName) return ;
   return {
-    route: { name: routeName, code: routeCode },
+    route: { name: routeName ?? NOT_FOUND_ERROR, code: routeCode },
     middleware: {
-      name: middlewareName,
+      name: middlewareName ?? NOT_FOUND_ERROR,
       code: middlewareCode,
     },
     service: {
-      name: serviceName,
+      name: serviceName ?? NOT_FOUND_ERROR,
       code: serviceCode,
     },
   };
