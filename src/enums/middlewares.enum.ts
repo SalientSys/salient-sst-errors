@@ -1,3 +1,7 @@
+/**
+ * This enum is used to define a list of middlewares that are used in the application.
+ * Which is primarily used to throw errors with the correct context.
+ */
 export enum Middleware {
   ValidationMiddleware = 10001,
   LoginRequestHandler = 10002,

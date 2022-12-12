@@ -1,3 +1,7 @@
+/**
+ * This enum is used to define a list of services that are used in the application.
+ * Which is primarily used to throw errors with the correct context.
+ */
 export enum Service {
   Server = 10001,
   ValidationService = 10002,
