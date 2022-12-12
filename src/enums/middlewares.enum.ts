@@ -92,4 +92,6 @@ export enum Middleware {
   GetAssociatedOrganizationsHandler = 10089,
   AddRemoveDeploymentToConnectionHandler = 10090,
   GetUsersOrgConnectionsHandler = 10091,
+  DeRegisterDeploymentHandler = 10092,
+  PatchDeploymentById = 10093,
 }

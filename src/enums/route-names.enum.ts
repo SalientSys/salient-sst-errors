@@ -50,4 +50,6 @@ export enum RouteName {
   PutOrganizationByIdDisassociate = '[PUT]/organizations/:organizationId/disassociate',
   PostDeploymentByIdRequestQuote = '[POST]/deployment-instances/:deploymentId/requestQuote',
   PatchOrganizationById = '[PATCH]/organizations/:organizationId',
+  PostDeploymentByIdDeregister = '[POST]/deployment-instances/:deploymentId/deregister',
+  PatchDeploymentById = '[PATCH]/deployment-instances/:deploymentId',
 }
