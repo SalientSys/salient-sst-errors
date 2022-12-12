@@ -52,4 +52,5 @@ export enum RouteName {
   PatchOrganizationById = '[PATCH]/organizations/:organizationId',
   PostDeploymentByIdDeregister = '[POST]/deployment-instances/:deploymentId/deregister',
   PatchDeploymentById = '[PATCH]/deployment-instances/:deploymentId',
+  PostDeploymentRegisterV2_1 = 'api[v2.1]/[POST]/deployment-instances/register',
 }
