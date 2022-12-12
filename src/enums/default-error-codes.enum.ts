@@ -5,4 +5,5 @@ export enum DefaultErrorInfo {
   DefaultStatus = 500,
   DefaultMessage = 'Something went wrong',
   DefaultFullErrorCode = 999999999999,
+  DefaultErrorReasonCode = 999,
 }

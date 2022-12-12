@@ -1,5 +1,5 @@
-import { routeMap } from './routes-map';
-import { Middleware, RouteName, Service } from './enums';
+import { errorReasonMap, routeMap } from './maps';
+import { ErrorReason, Middleware, RouteName, Service } from './enums';
 
 /**
  *         Route Middleware Service
@@ -10,10 +10,12 @@ const generateErrorCode = (
   route: number,
   middleware: Middleware,
   service: Service,
+  reason: number,
 ) => {
-  return parseInt(`${route}${middleware}${service}`);
+  return parseInt(`${route}${middleware}${service}${reason}`);
 };
 
 const generateErrorOriginCode = (route: RouteName) => routeMap[route];
-
-export { generateErrorCode, generateErrorOriginCode };
+const generateErrorReasonCode = (reason: ErrorReason) =>
+  errorReasonMap[ErrorReason[reason]];
+export { generateErrorCode, generateErrorOriginCode, generateErrorReasonCode };

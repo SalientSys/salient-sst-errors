@@ -3,5 +3,5 @@ export * from './interfaces';
 export * from './http-exception';
 export * from './index-map';
 export * from './parse-error';
-export * from './routes-map';
+export * from './maps';
 export * from './error-code-generator';

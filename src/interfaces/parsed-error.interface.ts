@@ -11,4 +11,8 @@ export interface IParsedError {
     name: string;
     code: number;
   };
+  errorReason: {
+    name: string;
+    code: number;
+  };
 }
