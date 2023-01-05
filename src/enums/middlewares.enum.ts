@@ -95,4 +95,5 @@ export enum Middleware {
   DeRegisterDeploymentHandler = 10092,
   PatchDeploymentById = 10093,
   VerifyOrganizationExistsMiddleware = 10094,
+  GetOrganizationAddressSuggestions = 10095,
 }

@@ -53,4 +53,5 @@ export enum RouteName {
   PostDeploymentByIdDeregister = '[POST]/deployment-instances/:deploymentId/deregister',
   PatchDeploymentById = '[PATCH]/deployment-instances/:deploymentId',
   PostDeploymentRegisterV2_1 = 'api[v2.1]/[POST]/deployment-instances/registerPostDeploymentRegister',
+  GetOrganizationAddressSuggestions = '[GET]/organizations/address-suggestions',
 }
