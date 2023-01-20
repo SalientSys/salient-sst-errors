@@ -16,6 +16,7 @@ export enum RouteName {
   GetNotifications = '[GET]/notifications',
   PutNotificationById = '[PUT]/notifications/:notificationId',
   PostInvites = '[POST]/invites',
+  GetDeploymentInstancesByIdRoot = '[GET]/deployment-instances/:deploymentId/*',
   GetDeploymentInstancesById = '[GET]/deployment-instances/:deploymentId',
   GetDeploymentInstancesByIdParam1 = '[GET]/deployment-instances/:deploymentId/:param1',
   GetDeploymentInstancesByIdParam2 = '[GET]/deployment-instances/:deploymentId/:param1/:param2',
