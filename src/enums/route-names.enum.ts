@@ -51,9 +51,10 @@ export enum RouteName {
   PutOrganizationByIdDisassociate = '[PUT]/organizations/:organizationId/disassociate',
   PostDeploymentByIdRequestQuote = '[POST]/deployment-instances/:deploymentId/requestQuote',
   PatchOrganizationById = '[PATCH]/organizations/:organizationId',
-  PatchOrganizationByIdV2_1 = "api[v2.1]/[PATCH]/organizations/:organizationId",
+  PatchOrganizationByIdV2_1 = 'api[v2.1]/[PATCH]/organizations/:organizationId',
   PostDeploymentByIdDeregister = '[POST]/deployment-instances/:deploymentId/deregister',
   PatchDeploymentById = '[PATCH]/deployment-instances/:deploymentId',
   PostDeploymentRegisterV2_1 = 'api[v2.1]/[POST]/deployment-instances/registerPostDeploymentRegister',
   GetOrganizationAddressSuggestions = '[GET]/organizations/address-suggestions',
+  GetAdminUsersListUsers = '[GET]/users/admin/list-users',
 }
