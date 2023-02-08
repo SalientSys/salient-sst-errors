@@ -16,6 +16,7 @@ export enum RouteName {
   GetNotifications = '[GET]/notifications',
   PutNotificationById = '[PUT]/notifications/:notificationId',
   PostInvites = '[POST]/invites',
+  GetDeploymentInstancesByIdRoot = '[GET]/deployment-instances/:deploymentId/*',
   GetDeploymentInstancesById = '[GET]/deployment-instances/:deploymentId',
   GetDeploymentInstancesByIdParam1 = '[GET]/deployment-instances/:deploymentId/:param1',
   GetDeploymentInstancesByIdParam2 = '[GET]/deployment-instances/:deploymentId/:param1/:param2',
@@ -50,7 +51,9 @@ export enum RouteName {
   PutOrganizationByIdDisassociate = '[PUT]/organizations/:organizationId/disassociate',
   PostDeploymentByIdRequestQuote = '[POST]/deployment-instances/:deploymentId/requestQuote',
   PatchOrganizationById = '[PATCH]/organizations/:organizationId',
+  PatchOrganizationByIdV2_1 = "api[v2.1]/[PATCH]/organizations/:organizationId",
   PostDeploymentByIdDeregister = '[POST]/deployment-instances/:deploymentId/deregister',
   PatchDeploymentById = '[PATCH]/deployment-instances/:deploymentId',
   PostDeploymentRegisterV2_1 = 'api[v2.1]/[POST]/deployment-instances/registerPostDeploymentRegister',
+  GetOrganizationAddressSuggestions = '[GET]/organizations/address-suggestions',
 }
