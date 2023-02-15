@@ -25,4 +25,5 @@ export enum Service {
   GatewayService = 10020,
   OrgConnectionService = 10021,
   GoogleApiService = 10022,
+  RequestQueryService = 10023,
 }
