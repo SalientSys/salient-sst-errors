@@ -58,8 +58,8 @@ export enum RouteName {
   GetOrganizationAddressSuggestions = '[GET]/organizations/address-suggestions',
   GetAdminUsersListUsers = '[GET]/users/admin/list-users',
   GetDeploymentByIdAdminRoot = '[GET]/deployments/admin/:deploymentId/*',
-  DeploymentAdminRoot = '/deployments/admin/:deploymentId/*',
-  DeploymentAdminVpnUsers = '[GET]/deployments/admin/:deploymentId/vpn-users*',
-  DeploymentAdminRestartVpn = '[PUT]/deployments/admin/:deploymentId/restart-vpn*',
-  GetRemoteAccessLogs = '[GET]/deployments/admin/:deploymentId/remote-access-logs',
+  AdminDeploymentRoot = '/deployments/admin/:deploymentId/*',
+  AdminGetDeploymentVpnUsers = '[GET]/deployments/admin/:deploymentId/vpn-users*',
+  AdminPutDeploymentRestartVpn = '[PUT]/deployments/admin/:deploymentId/restart-vpn*',
+  AdminGetDeploymentRemoteAccessLogs = '[GET]/deployments/admin/:deploymentId/remote-access-logs',
 }
