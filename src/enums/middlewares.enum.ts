@@ -96,4 +96,7 @@
   VerifyOrganizationExistsMiddleware = 10094,
   GetOrganizationAddressSuggestions = 10095,
   ListUsersHandler = 10096,
+  GetDeploymentProxyLogsHandler = 10097,
+  RestartDeploymentVpnHandler = 10098,
+  GetDeploymentVpnUsersHandler = 10099,
 }

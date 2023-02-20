@@ -57,4 +57,7 @@ export enum RouteName {
   PostDeploymentRegisterV2_1 = 'api[v2.1]/[POST]/deployment-instances/registerPostDeploymentRegister',
   GetOrganizationAddressSuggestions = '[GET]/organizations/address-suggestions',
   GetAdminUsersListUsers = '[GET]/users/admin/list-users',
+  GetDeploymentByIdVpnUsers = '[GET]/deployments/:deploymentId/vpn/users',
+  PutDeploymentByIdVpnRestart = '[PUT]/deployments/:deploymentId/vpn/restart',
+  GetDeploymentByIdProxyLogs = '[GET]/deployments/:deploymentId/proxy/logs',
 }
