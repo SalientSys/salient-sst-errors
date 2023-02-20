@@ -57,9 +57,7 @@ export enum RouteName {
   PostDeploymentRegisterV2_1 = 'api[v2.1]/[POST]/deployment-instances/registerPostDeploymentRegister',
   GetOrganizationAddressSuggestions = '[GET]/organizations/address-suggestions',
   GetAdminUsersListUsers = '[GET]/users/admin/list-users',
-  GetDeploymentByIdAdminRoot = '[GET]/deployments/admin/:deploymentId/*',
-  AdminDeploymentRoot = '/deployments/admin/:deploymentId/*',
-  AdminGetDeploymentVpnUsers = '[GET]/deployments/admin/:deploymentId/vpn-users*',
-  AdminPutDeploymentRestartVpn = '[PUT]/deployments/admin/:deploymentId/restart-vpn*',
-  AdminGetDeploymentRemoteAccessLogs = '[GET]/deployments/admin/:deploymentId/remote-access-logs',
+  GetDeploymentByIdVpnUsers = '[GET]/deployments/:deploymentId/vpn/users',
+  PutDeploymentByIdVpnRestart = '[PUT]/deployments/:deploymentId/vpn/restart',
+  GetDeploymentByIdProxyLogs = '[GET]/deployments/:deploymentId/proxy/logs',
 }
