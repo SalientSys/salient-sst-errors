@@ -1,5 +1,6 @@
 export enum RouteName {
   AuthenticationLogin = '[POST]/authentication/login',
+  AuthenticationVerifyToken = '[POST]/authentication/verify',
   AuthenticationSendPasswordEmail = '[POST]/authentication/send-password-email',
   AuthenticationVerifyPasswordReset = '[POST]/authentication/password',
   Register = '[POST]/registration/register',
