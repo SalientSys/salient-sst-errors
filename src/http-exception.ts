@@ -4,29 +4,33 @@ import {
   ErrorReason,
   DefaultErrorInfo,
   IErrorContext,
-  generateErrorOriginCode,
+  routeMap,
+  Details,
 } from '.';
 
 class HttpException {
   code: number;
   status: HttpStatusCode;
   reason: ErrorReason | string;
+  details?: string;
 
   constructor(
     status: HttpStatusCode,
-    reason: ErrorReason | string,
     context: IErrorContext,
+    details?: string,
   ) {
     this.status = status;
-    this.reason = reason;
-    const routeCode = generateErrorOriginCode(context.route);
+    const routeCode = routeMap[context.route];
+    const detailsCode = Details[context.details];
 
     const code = generateErrorCode(
       routeCode ?? DefaultErrorInfo.DefaultRoute,
       context.middleware,
-      context.service,
+      detailsCode,
     );
+
     this.code = code;
+    this.details = details;
   }
 }
 
