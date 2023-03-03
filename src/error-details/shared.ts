@@ -89,12 +89,6 @@ export const sharedErrorDetailsMap: IDetailsMap = {
       'The user does not have create permissions for the requested resource and the strict flag is set to true',
   },
 
-  [Details.FailedToUpdateObject]: {
-    friendlyMessage: 'Failed to update',
-    technichalReason:
-      'The updateService.updateById threw an error when trying to update the object',
-  },
-
   [Details.UpdateQueryResultUndefined]: {
     friendlyMessage: 'Update query result was not found',
     technichalReason:
