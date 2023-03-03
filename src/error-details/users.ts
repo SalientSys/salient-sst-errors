@@ -31,10 +31,4 @@ export const usersErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'You are not authorized to perform this action',
     technichalReason: "The user's organization was not salient",
   },
-
-  [Details.OrganizationByDeploymentIdNotFoundInDb]: {
-    friendlyMessage: 'Organization was not found for deployment',
-    technichalReason:
-      'The organization was not found in the database with that deployment Id',
-  },
 };

@@ -14,7 +14,6 @@ const Shared = [
   'DeleteNotPermitted',
   'UpdateNotPermitted',
   'CreateNotPermitted',
-  'FailedToUpdateObject',
   'UpdateQueryResultUndefined',
 ] as const;
 
@@ -25,6 +24,8 @@ const User = [
   'UserNotAdmin',
   'UserHasNoOrgUpdateNotPermitted',
   'UserNotSalient',
+  'UserByEmailNotFoundInDb',
+  'UserDoesNotBelongToCurrentOrganization',
 ] as const;
 
 const Organization = [
@@ -34,22 +35,26 @@ const Organization = [
   'OrganizationTypeNotEndUser',
   'OrganizationMissingFromLocals',
   'OrganizationByDeploymentIdNotFoundInDb',
+  'OrgNotFoundWhenDeregisteringDeployment',
 ] as const;
 
 const Deployments = [
-  'SecretNotFound',
-  'SecretNotValid',
-  'DeploymentIdMissingFromBody',
+  'SecretTokenNotFound',
+  'InvalidSecretToken',
+  'DeploymentIdMissingFromRequestBody',
   'DeploymentAlreadyRegisteredInDifferentOrg',
   'DeploymentIdAlreadyCachedInMemory',
   'RegisteredDeploymentFound',
-  'DeploymentByIdNotFoundByParam',
+  'MissingDeploymentIdParam',
   'DeploymentByIdNotFoundByBody',
   'DeploymentNotRegistered',
   'DeploymentMissingFromLocals',
   'DeploymentByIdNotFoundInDb',
   'DeploymentIdNotFoundInConnectedOrgs',
   'FailedToSaveDeployment',
+  'FailedToUpdateDeployment',
+  'DeploymentNotFoundInDb',
+  'DeploymentSubParamNotFound',
 ] as const;
 
 const Recorders = ['RecordersMissingFromLocals'] as const;
@@ -57,12 +62,18 @@ const Recorders = ['RecordersMissingFromLocals'] as const;
 const Gateway = [
   'GatewayFailure',
   'DuplicateGateway',
-  'AccountCreationFailedToStart',
+  'Env0AccountCreationFailedToStart',
   'Env0GatewayCreationFailed',
   'GatewayDeploymentProcessFailed',
   'GatewayDeploymentIdNotFoundInDb',
   'UpdateGatewayVpnAndSecretFailed',
   'UpdateSecretsManagerFailed',
+  'VpnStartFailed',
+  'VpnStopFailed',
+  'ProxyStartFailed',
+  'ProxyStopFailed',
+  'VpnOrProxyFailedToStart',
+  'VpnOrProxyFailedToStop',
 ] as const;
 
 type detailCodeNames =
