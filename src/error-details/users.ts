@@ -37,4 +37,16 @@ export const usersErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The organization was not found in the database with that deployment Id',
   },
+
+  [Details.UserByEmailNotFoundInDb]: {
+    friendlyMessage: 'User was not found',
+    technichalReason:
+      'getByEmail returned a falsy value for user with that email',
+  },
+
+  [Details.UserDoesNotBelongToCurrentOrganization]: {
+    friendlyMessage: 'User does not belong to current organization',
+    technichalReason:
+      'The userId does not belong to the organization in the request',
+  },
 };

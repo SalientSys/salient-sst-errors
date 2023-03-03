@@ -25,6 +25,8 @@ const User = [
   'UserNotAdmin',
   'UserHasNoOrgUpdateNotPermitted',
   'UserNotSalient',
+  'UserByEmailNotFoundInDb',
+  'UserDoesNotBelongToCurrentOrganization',
 ] as const;
 
 const Organization = [
