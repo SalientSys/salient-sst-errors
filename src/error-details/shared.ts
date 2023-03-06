@@ -94,4 +94,26 @@ export const sharedErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The updateService.updateById returned undefined when trying to update the object',
   },
+
+  [Details.RecipientMissingFromLocals]: {
+    friendlyMessage: 'Recipient missing from locals',
+    technichalReason:
+      'The recipient was not found in the response.locals object, unless you have your middlewares set up incorrectly this should never happen',
+  },
+
+  [Details.RecipientEmailInMemoryCache]: {
+    friendlyMessage: 'Recipient email in memory cache',
+    technichalReason: 'The recipient email was found in the memory cache',
+  },
+
+  [Details.RecipientEmailMissingFromLocals]: {
+    friendlyMessage: 'Recipient email missing from locals',
+    technichalReason:
+      'The recipient email was not found in the response.locals object, unless you have your middlewares set up incorrectly this should never happen',
+  },
+
+  [Details.SuspiciousRequestor]: {
+    friendlyMessage: 'Suspicious requestor',
+    technichalReason: 'The requestor is engaging in suspicious behavior',
+  },
 };
