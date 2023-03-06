@@ -3,4 +3,10 @@ export const Notification = [
   'NotificationRequestorIdMissing',
   'FailedToDeleteAdminNotification',
   'FailedToSaveNotification',
+  'SelfInviteNotAllowed',
+  'RecipientEmailMissingFromLocals',
+  'RecipientEmailInMemoryCache',
+  'RecipientMissingFromLocals',
+  'RecipientOrganizationMissingFromLocals',
+  'NotificationAlreadyExists',
 ] as const;

@@ -12,7 +12,6 @@ export const Shared = [
   'CreateNotPermitted',
   'UpdateQueryResultUndefined',
   'RecipientEmailMissingFromLocals',
-  'RecipientEmailInMemoryCache',
   'RecipientMissingFromLocals',
   'SuspiciousRequestor',
   'FailedToUpdateObject',

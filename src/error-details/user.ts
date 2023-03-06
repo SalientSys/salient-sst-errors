@@ -55,7 +55,7 @@ export const usersErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The user.registration.isEmailVerified was false or user.registration.activeRegistration exists',
   },
-  [Details.UserRegistrationIsActive]: {
+  [Details.UserPendingVerification]: {
     friendlyMessage: 'User has an active registration',
     technichalReason:
       'The user.registration.activeRegistration exists in the database',
@@ -115,5 +115,15 @@ export const usersErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'User is not in active registration',
     technichalReason:
       'The user.registration.activeRegistration was not found in the database',
+  },
+
+  [Details.UserNotInRequestedOrganization]: {
+    friendlyMessage: 'User is not in your organization',
+    technichalReason: 'The user does not belong to the requested organization',
+  },
+
+  [Details.UserRegistrationVerificationAlreadyInProgress]: {
+    friendlyMessage: 'Recipient email in memory cache',
+    technichalReason: 'The recipient email was found in the memory cache',
   },
 };

@@ -18,5 +18,7 @@ export const User = [
   'InvalidPasswordResetAccessCode',
   'PasswordResetAccessTokenExpired',
   'FailedToGenerateHashedPassword',
-  'UserRegistrationIsActive',
+  'UserPendingVerification',
+  'UserNotInRequestedOrganization',
+  'UserRegistrationVerificationAlreadyInProgress',
 ] as const;
