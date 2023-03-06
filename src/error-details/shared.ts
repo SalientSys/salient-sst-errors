@@ -89,15 +89,37 @@ export const sharedErrorDetailsMap: IDetailsMap = {
       'The user does not have create permissions for the requested resource and the strict flag is set to true',
   },
 
-  [Details.FailedToUpdateObject]: {
-    friendlyMessage: 'Failed to update',
-    technichalReason:
-      'The updateService.updateById threw an error when trying to update the object',
-  },
-
   [Details.UpdateQueryResultUndefined]: {
     friendlyMessage: 'Update query result was not found',
     technichalReason:
       'The updateService.updateById returned undefined when trying to update the object',
+  },
+
+  [Details.RecipientMissingFromLocals]: {
+    friendlyMessage: 'Recipient missing from locals',
+    technichalReason:
+      'The recipient was not found in the response.locals object, unless you have your middlewares set up incorrectly this should never happen',
+  },
+
+  [Details.RecipientEmailInMemoryCache]: {
+    friendlyMessage: 'Recipient email in memory cache',
+    technichalReason: 'The recipient email was found in the memory cache',
+  },
+
+  [Details.RecipientEmailMissingFromLocals]: {
+    friendlyMessage: 'Recipient email missing from locals',
+    technichalReason:
+      'The recipient email was not found in the response.locals object, unless you have your middlewares set up incorrectly this should never happen',
+  },
+
+  [Details.SuspiciousRequestor]: {
+    friendlyMessage: 'Suspicious requestor',
+    technichalReason: 'The requestor is engaging in suspicious behavior',
+  },
+
+  [Details.FailedToUpdateObject]: {
+    friendlyMessage: 'Failed to update object',
+    technichalReason:
+      'The updateService.updateById threw an error when trying to update the object',
   },
 };

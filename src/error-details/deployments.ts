@@ -87,6 +87,11 @@ export const deploymentsErrorDetailsMap: IDetailsMap = {
       'The sub param passed in the route was not found in the deployment object',
   },
 
+  [Details.DeploymentByIdNotFoundInDb]: {
+    friendlyMessage: 'Deployment by that id not found',
+    technichalReason: 'The deployment by that id was not found in the database',
+  },
+
   [Details.DeploymentByIdNotFoundByParam]: {
     friendlyMessage: 'Deployment by id not found by param',
     technichalReason: 'The deployment id was not found in the url param',

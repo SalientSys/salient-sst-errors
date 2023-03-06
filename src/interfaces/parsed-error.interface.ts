@@ -11,6 +11,6 @@ export interface IParsedError {
   };
   details: {
     code: number;
-    details: IDetails;
+    data: IDetails;
   };
 }
