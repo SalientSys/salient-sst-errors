@@ -1,5 +1,6 @@
 import { Details } from '..';
 import { IDetailsMap } from '../interfaces';
+
 export const notificationDetailsMap: IDetailsMap = {
   [Details.NotificationMissingFromLocals]: {
     friendlyMessage: 'Notification missing from locals',
@@ -21,5 +22,39 @@ export const notificationDetailsMap: IDetailsMap = {
   [Details.FailedToSaveNotification]: {
     friendlyMessage: 'Failed to save notification',
     technichalReason: 'the notification.save() function threw an error',
+  },
+
+  [Details.RecipientMissingFromLocals]: {
+    friendlyMessage: 'Recipient missing from locals',
+    technichalReason:
+      'The recipient was not found in the response.locals object, unless you have your middlewares set up incorrectly this should never happen',
+  },
+
+  [Details.RecipientEmailInMemoryCache]: {
+    friendlyMessage: 'Recipient email in memory cache',
+    technichalReason: 'The recipient email was found in the memory cache',
+  },
+
+  [Details.RecipientEmailMissingFromLocals]: {
+    friendlyMessage: 'Recipient email missing',
+    technichalReason:
+      'The recipient email was not found in the response.locals object, unless you have your middlewares set up incorrectly this should never happen',
+  },
+
+  [Details.SelfInviteNotAllowed]: {
+    friendlyMessage: 'Self invite not allowed',
+    technichalReason: 'The requestor and recipient are the same user',
+  },
+
+  [Details.RecipientOrganizationMissingFromLocals]: {
+    friendlyMessage: 'Recipient organization missing',
+    technichalReason:
+      'The recipient organization was not found in the response.locals object',
+  },
+
+  [Details.NotificationAlreadyExists]: {
+    friendlyMessage: 'Notification already exists',
+    technichalReason:
+      'The notification already exists in the database, this is a duplicate',
   },
 };

@@ -1,4 +1,4 @@
-export * from './users';
+export * from './user';
 export * from './organization';
 export * from './deployments';
 export * from './recorders';
