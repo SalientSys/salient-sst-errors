@@ -11,4 +11,5 @@ export const Shared = [
   'UpdateNotPermitted',
   'CreateNotPermitted',
   'UpdateQueryResultUndefined',
+  'FailedToUpdateObject',
 ] as const;
