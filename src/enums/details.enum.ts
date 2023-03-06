@@ -6,6 +6,7 @@ import {
   Recorders,
   Gateway,
   Auth,
+  Notification,
 } from './details';
 
 type detailCodeNames =
@@ -15,6 +16,7 @@ type detailCodeNames =
   | typeof Organization[number]
   | typeof Deployments[number]
   | typeof Recorders[number]
+  | typeof Notification[number]
   | typeof Gateway[number];
 
 const Details: {
@@ -27,6 +29,7 @@ const Details: {
   ...Deployments,
   ...Recorders,
   ...Gateway,
+  ...Notification,
 ].reduce((acc, key, index) => {
   acc[key] = index + 10000;
   return acc;
