@@ -54,9 +54,9 @@ function parseErrorCode(
     },
     details: {
       code: detailsCode,
-      details: details ?? {
-        friendlyMessage: NOT_FOUND_ERROR,
-        technichalReason: NOT_FOUND_ERROR,
+      data: details ?? {
+        friendlyMessage: null,
+        technichalReason: null,
       },
     },
   };

@@ -17,4 +17,9 @@ export const notificationDetailsMap: IDetailsMap = {
     friendlyMessage: 'Failed to delete notification',
     technichalReason: 'the deleteAdminNotifications function threw an error',
   },
+
+  [Details.FailedToSaveNotification]: {
+    friendlyMessage: 'Failed to save notification',
+    technichalReason: 'the notification.save() function threw an error',
+  },
 };

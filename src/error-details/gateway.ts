@@ -64,6 +64,11 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
     technichalReason: "The startProxy function's status was 'rejected'",
   },
 
+  [Details.ProxyStopFailed]: {
+    friendlyMessage: 'Proxy could not stop',
+    technichalReason: "The stopProxy function's status was 'rejected'",
+  },
+
   [Details.VpnOrProxyFailedToStop]: {
     friendlyMessage: 'Vpn or proxy could not stop',
     technichalReason:
