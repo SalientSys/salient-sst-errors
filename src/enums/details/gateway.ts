@@ -1,0 +1,16 @@
+export const Gateway = [
+  'GatewayFailure',
+  'DuplicateGateway',
+  'Env0AccountCreationFailedToStart',
+  'Env0GatewayCreationFailed',
+  'GatewayDeploymentProcessFailed',
+  'GatewayDeploymentIdNotFoundInDb',
+  'UpdateGatewayVpnAndSecretFailed',
+  'UpdateSecretsManagerFailed',
+  'VpnStartFailed',
+  'VpnStopFailed',
+  'ProxyStartFailed',
+  'ProxyStopFailed',
+  'VpnOrProxyFailedToStart',
+  'VpnOrProxyFailedToStop',
+] as const;

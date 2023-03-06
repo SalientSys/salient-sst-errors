@@ -2,17 +2,17 @@ import { Details, IDetailsMap } from '..';
 
 export const usersErrorDetailsMap: IDetailsMap = {
   [Details.UserIdMissingFromLocals]: {
-    friendlyMessage: 'Bad token',
+    friendlyMessage: 'User Id was not found',
     technichalReason: 'The userId was missing from the res.locals[userId]',
   },
 
   [Details.UserByIdNotFoundInDb]: {
-    friendlyMessage: 'Bad token',
+    friendlyMessage: 'The user was not found in our system',
     technichalReason: 'The user was not found in the database',
   },
 
   [Details.UserMissingFromLocals]: {
-    friendlyMessage: 'Server Failure',
+    friendlyMessage: 'User was not found',
     technichalReason:
       'The user was missing from the res.locals[user], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
   },
@@ -30,11 +30,5 @@ export const usersErrorDetailsMap: IDetailsMap = {
   [Details.UserNotSalient]: {
     friendlyMessage: 'You are not authorized to perform this action',
     technichalReason: "The user's organization was not salient",
-  },
-
-  [Details.OrganizationByDeploymentIdNotFoundInDb]: {
-    friendlyMessage: 'Organization was not found for deployment',
-    technichalReason:
-      'The organization was not found in the database with that deployment Id',
   },
 };

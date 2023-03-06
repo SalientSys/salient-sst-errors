@@ -30,4 +30,16 @@ export const organizationDetailsMap: IDetailsMap = {
     technichalReason:
       'The organization was missing from the res.locals[organization], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
   },
+
+  [Details.OrgNotFoundWhenDeregisteringDeployment]: {
+    friendlyMessage: 'Server Failure',
+    technichalReason:
+      'The organization was not found when deregistering a deployment',
+  },
+
+  [Details.OrganizationByDeploymentIdNotFoundInDb]: {
+    friendlyMessage: 'Organization was not found for deployment',
+    technichalReason:
+      'The organization was not found in the database with that deployment Id',
+  },
 };

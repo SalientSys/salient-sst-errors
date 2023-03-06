@@ -1,7 +1,6 @@
 import {
   generateErrorCode,
   HttpStatusCode,
-  ErrorReason,
   DefaultErrorInfo,
   IErrorContext,
   routeMap,
@@ -11,7 +10,6 @@ import {
 class HttpException {
   code: number;
   status: HttpStatusCode;
-  reason: ErrorReason | string;
   details?: string;
 
   constructor(

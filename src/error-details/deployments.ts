@@ -2,18 +2,18 @@ import { Details } from '../enums';
 import { IDetailsMap } from '../interfaces';
 
 export const deploymentsErrorDetailsMap: IDetailsMap = {
-  [Details.SecretNotFound]: {
+  [Details.SecretTokenNotFound]: {
     friendlyMessage: 'Secret not found',
     technichalReason:
       'The secret was not found in the req.headers[REQUEST_HEADER_SECRET_KEY]',
   },
-  [Details.SecretNotValid]: {
+  [Details.InvalidSecretToken]: {
     friendlyMessage: 'Secret is not valid',
     technichalReason:
       'The secret did not path through the validateSecretToken function with a truthy value',
   },
 
-  [Details.DeploymentIdMissingFromBody]: {
+  [Details.DeploymentIdMissingFromRequestBody]: {
     friendlyMessage: 'Deployment id missing from body',
     technichalReason:
       'The deployment id was not found in neither the req.body.deploymentId nor req.body.managementServerGuid',
@@ -35,7 +35,7 @@ export const deploymentsErrorDetailsMap: IDetailsMap = {
       'The deployment id was found in the database and the isRegistered flag was set to true',
   },
 
-  [Details.DeploymentByIdNotFoundByParam]: {
+  [Details.MissingDeploymentIdParam]: {
     friendlyMessage: 'Deployment by id not found by param',
     technichalReason:
       'The deployment id was not found in the database by the req.params.deploymentId',
@@ -69,5 +69,21 @@ export const deploymentsErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'Failed to save deployment',
     technichalReason:
       'deployment.save() threw an error while trying to save the deployment',
+  },
+
+  [Details.FailedToUpdateDeployment]: {
+    friendlyMessage: 'Failed to update deployment',
+    technichalReason:
+      'deploymentService.updateById threw an error while trying to update the deployment',
+  },
+
+  [Details.DeploymentNotFoundInDb]: {
+    friendlyMessage: 'Deployment not found in database',
+    technichalReason: 'The deployment by that id was not found in the database',
+  },
+  [Details.DeploymentSubParamNotFound]: {
+    friendlyMessage: 'The deployment details was not found',
+    technichalReason:
+      'The sub param passed in the route was not found in the deployment object',
   },
 };

@@ -1,71 +1,15 @@
-const Shared = [
-  'NoTokenFound',
-  'NoTokenSecret',
-  'JwtVerifyFailed',
-  'NoTokenAudience',
-  'ValidationError',
-  'UndefinedParam',
-  'InvalidSubsetSelection',
-  'ParamQueryNull',
-  'ParamQueryError',
-  'SubParamNotFound',
-  'EmailDeliveryFailure',
-  'ReadNotPermitted',
-  'DeleteNotPermitted',
-  'UpdateNotPermitted',
-  'CreateNotPermitted',
-  'FailedToUpdateObject',
-  'UpdateQueryResultUndefined',
-] as const;
-
-const User = [
-  'UserIdMissingFromLocals',
-  'UserByIdNotFoundInDb',
-  'UserMissingFromLocals',
-  'UserNotAdmin',
-  'UserHasNoOrgUpdateNotPermitted',
-  'UserNotSalient',
-] as const;
-
-const Organization = [
-  'OrganizationByUserIdNotFoundInDb',
-  'OrganizationTypeNotSalient',
-  'OrganizationTypeNotIntegrator',
-  'OrganizationTypeNotEndUser',
-  'OrganizationMissingFromLocals',
-  'OrganizationByDeploymentIdNotFoundInDb',
-] as const;
-
-const Deployments = [
-  'SecretNotFound',
-  'SecretNotValid',
-  'DeploymentIdMissingFromBody',
-  'DeploymentAlreadyRegisteredInDifferentOrg',
-  'DeploymentIdAlreadyCachedInMemory',
-  'RegisteredDeploymentFound',
-  'DeploymentByIdNotFoundByParam',
-  'DeploymentByIdNotFoundByBody',
-  'DeploymentNotRegistered',
-  'DeploymentMissingFromLocals',
-  'DeploymentByIdNotFoundInDb',
-  'DeploymentIdNotFoundInConnectedOrgs',
-  'FailedToSaveDeployment',
-] as const;
-
-const Recorders = ['RecordersMissingFromLocals'] as const;
-
-const Gateway = [
-  'GatewayFailure',
-  'DuplicateGateway',
-  'AccountCreationFailedToStart',
-  'Env0GatewayCreationFailed',
-  'GatewayDeploymentProcessFailed',
-  'GatewayDeploymentIdNotFoundInDb',
-  'UpdateGatewayVpnAndSecretFailed',
-  'UpdateSecretsManagerFailed',
-] as const;
+import {
+  Shared,
+  User,
+  Organization,
+  Deployments,
+  Recorders,
+  Gateway,
+  Auth,
+} from './details';
 
 type detailCodeNames =
+  | typeof Auth[number]
   | typeof Shared[number]
   | typeof User[number]
   | typeof Organization[number]
@@ -77,6 +21,7 @@ const Details: {
   [key in detailCodeNames]: number;
 } = [
   ...Shared,
+  ...Auth,
   ...User,
   ...Organization,
   ...Deployments,
