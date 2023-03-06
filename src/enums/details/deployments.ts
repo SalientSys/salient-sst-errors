@@ -15,4 +15,5 @@ export const Deployments = [
   'FailedToUpdateDeployment',
   'DeploymentNotFoundInDb',
   'DeploymentSubParamNotFound',
+  'DeploymentByIdNotFoundByParam',
 ] as const;
