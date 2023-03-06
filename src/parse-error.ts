@@ -1,10 +1,11 @@
-import { routeMap, Middleware, Service, indexMap } from '.';
+import { routeMap, Middleware, indexMap } from '.';
+import { detailsMap } from './details-map';
 import { IParsedError } from './interfaces/parsed-error.interface';
 
 const FULL_CODE_LENGTH = 13;
 const ROUTE_CODE_LENGTH = 3;
 const MIDDLEWARE_LENGTH = 5;
-const SERVICE_LENGTH = 5;
+const DETAILS_LENGTH = 5;
 
 const NOT_FOUND_ERROR = `Name not found` as const;
 
@@ -13,7 +14,7 @@ const PARSING_ERROR =
 const INVALID_CODE_ERROR =
   `Invalid error code. Error code must be a number that is included in the related enums.` as const;
 
-export function parseErrorCode(
+function parseErrorCode(
   code: number,
 ): IParsedError | typeof PARSING_ERROR | typeof INVALID_CODE_ERROR {
   const stringified = code.toString();
@@ -32,8 +33,8 @@ export function parseErrorCode(
 
   index += MIDDLEWARE_LENGTH;
 
-  const serviceCode = parseInt(
-    stringified.substring(index, index + SERVICE_LENGTH),
+  const detailsCode = parseInt(
+    stringified.substring(index, index + DETAILS_LENGTH),
   );
 
   const routeName = Object.keys(routeMap).find(
@@ -43,9 +44,7 @@ export function parseErrorCode(
     (key: keyof typeof Middleware) =>
       indexMap(Middleware, key) === middlewareCode,
   );
-  const serviceName = Object.keys(Service).find(
-    (key: keyof typeof Service) => indexMap(Service, key) === serviceCode,
-  );
+  const details = detailsMap[detailsCode];
   // if (!routeName || !middlewareName || !serviceName) return ;
   return {
     route: { name: routeName ?? NOT_FOUND_ERROR, code: routeCode },
@@ -53,9 +52,19 @@ export function parseErrorCode(
       name: middlewareName ?? NOT_FOUND_ERROR,
       code: middlewareCode,
     },
-    service: {
-      name: serviceName ?? NOT_FOUND_ERROR,
-      code: serviceCode,
+    details: {
+      code: detailsCode,
+      details: details ?? {
+        friendlyMessage: NOT_FOUND_ERROR,
+        technichalReason: NOT_FOUND_ERROR,
+      },
     },
   };
 }
+export {
+  parseErrorCode,
+  FULL_CODE_LENGTH,
+  ROUTE_CODE_LENGTH,
+  MIDDLEWARE_LENGTH,
+  DETAILS_LENGTH,
+};

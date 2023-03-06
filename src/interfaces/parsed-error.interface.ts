@@ -1,3 +1,5 @@
+import { IDetails } from './details.interface';
+
 export interface IParsedError {
   route: {
     name: string;
@@ -7,8 +9,8 @@ export interface IParsedError {
     name: string;
     code: number;
   };
-  service: {
-    name: string;
+  details: {
     code: number;
+    details: IDetails;
   };
 }

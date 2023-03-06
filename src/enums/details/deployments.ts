@@ -1,0 +1,18 @@
+export const Deployments = [
+  'SecretTokenNotFound',
+  'InvalidSecretToken',
+  'DeploymentIdMissingFromRequestBody',
+  'DeploymentAlreadyRegisteredInDifferentOrg',
+  'DeploymentIdAlreadyCachedInMemory',
+  'RegisteredDeploymentFound',
+  'MissingDeploymentIdParam',
+  'DeploymentByIdNotFoundByBody',
+  'DeploymentNotRegistered',
+  'DeploymentMissingFromLocals',
+  'DeploymentByIdNotFoundInDb',
+  'DeploymentIdNotFoundInConnectedOrgs',
+  'FailedToSaveDeployment',
+  'FailedToUpdateDeployment',
+  'DeploymentNotFoundInDb',
+  'DeploymentSubParamNotFound',
+] as const;

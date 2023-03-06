@@ -1,19 +1,17 @@
 import { routeMap } from './routes-map';
-import { Middleware, RouteName, Service } from './enums';
+import { Middleware, RouteName } from './enums';
 
 /**
- *         Route Middleware Service
- * @returns 100  10000      10000   // 13 digit error code that can be parsed using the parseErrorCode function in this package
- *
+ * @returns Route: XXX  Middlware: XXXXX  Details:XXXXX
+ *   Can be parsed using the parseErrorCode function
  */
 const generateErrorCode = (
   route: number,
   middleware: Middleware,
-  service: Service,
+  details: number,
 ) => {
-  return parseInt(`${route}${middleware}${service}`);
+  return parseInt(`${route}${middleware}${details}`);
 };
 
 const generateErrorOriginCode = (route: RouteName) => routeMap[route];
-
 export { generateErrorCode, generateErrorOriginCode };
