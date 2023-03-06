@@ -8,7 +8,7 @@
     "lint": "eslint src/**",
     "lint-fix": "eslint src/** --fix",
     "wt": "tsc -w",
-    "patch-publish": "npm run build && npm version patch && npm publish"
+    "pre-release": "npm run build && npm version prerelease & npm publish"
   },
   "files": [
     "/dist",
