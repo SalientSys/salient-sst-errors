@@ -116,4 +116,10 @@ export const sharedErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'Suspicious requestor',
     technichalReason: 'The requestor is engaging in suspicious behavior',
   },
+
+  [Details.FailedToUpdateObject]: {
+    friendlyMessage: 'Failed to update object',
+    technichalReason:
+      'The updateService.updateById threw an error when trying to update the object',
+  },
 };

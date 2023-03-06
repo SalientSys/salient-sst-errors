@@ -15,4 +15,5 @@ export const Shared = [
   'RecipientEmailInMemoryCache',
   'RecipientMissingFromLocals',
   'SuspiciousRequestor',
+  'FailedToUpdateObject',
 ] as const;
