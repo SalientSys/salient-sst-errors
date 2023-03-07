@@ -42,4 +42,26 @@ export const organizationDetailsMap: IDetailsMap = {
     technichalReason:
       'The organization was not found in the database with that deployment Id',
   },
+
+  [Details.OrgConnectionMissingFromLocals]: {
+    friendlyMessage: 'Organization connection was not found',
+    technichalReason:
+      'The organization connection was missing from the res.locals[organizationConnection], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
+  },
+
+  [Details.FailedToSaveOrgConnection]: {
+    friendlyMessage: 'Failed to save organization connection',
+    technichalReason: 'orgConnection.save() threw an error',
+  },
+
+  [Details.OrganizationsAlreadyAssociated]: {
+    friendlyMessage: 'Organizations are already associated',
+    technichalReason: 'The organizations are already associated',
+  },
+
+  [Details.OrgConnectionNotFoundInDb]: {
+    friendlyMessage: 'Organization connection was not found',
+    technichalReason:
+      'The organization connection was not found in the database',
+  },
 };

@@ -21,4 +21,7 @@ export const User = [
   'UserPendingVerification',
   'UserNotInRequestedOrganization',
   'UserRegistrationVerificationAlreadyInProgress',
+  'UserNotIntegratorNorEndUser',
+  'UserNotIntegrator',
+  'UserNotEndUser',
 ] as const;

@@ -6,4 +6,10 @@ export const Organization = [
   'OrganizationMissingFromLocals',
   'OrganizationByDeploymentIdNotFoundInDb',
   'OrgNotFoundWhenDeregisteringDeployment',
+  'OrgConnectionMissingFromLocals',
+  'FailedToSaveOrgConnection',
+  'OrganizationByIdNotFoundInDb',
+  'FailedToDeleteOrgConnection',
+  'OrganizationsAlreadyAssociated',
+  'OrgConnectionNotFoundInDb',
 ] as const;
