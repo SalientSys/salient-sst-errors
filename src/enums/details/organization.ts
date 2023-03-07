@@ -13,5 +13,5 @@ export const Organization = [
   'OrganizationsAlreadyAssociated',
   'OrgConnectionNotFoundInDb',
   'OrganizationHasNoUsers',
-  'OrganizationHasOnlyOneAdmin',
+  'LastAdminNotAllowedToLeaveOrg',
 ] as const;

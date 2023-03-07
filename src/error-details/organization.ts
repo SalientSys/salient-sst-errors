@@ -70,7 +70,7 @@ export const organizationDetailsMap: IDetailsMap = {
     technichalReason: 'The organization you passed in has no users',
   },
 
-  [Details.OrganizationHasOnlyOneAdmin]: {
+  [Details.LastAdminNotAllowedToLeaveOrg]: {
     friendlyMessage: "Cannot remove an organization's last admin",
     technichalReason:
       'The organization only has one admin user and they cannot leave the organization.',
