@@ -12,4 +12,6 @@ export const Organization = [
   'FailedToDeleteOrgConnection',
   'OrganizationsAlreadyAssociated',
   'OrgConnectionNotFoundInDb',
+  'OrganizationHasNoUsers',
+  'OrganizationHasOnlyOneAdmin',
 ] as const;
