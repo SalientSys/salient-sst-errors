@@ -126,4 +126,30 @@ export const usersErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'Recipient email in memory cache',
     technichalReason: 'The recipient email was found in the memory cache',
   },
+
+  [Details.UserNotIntegratorNorEndUser]: {
+    friendlyMessage: 'You must be either an integrator or an end user',
+    technichalReason:
+      'The user organization type is neither integrator nor end user',
+  },
+
+  [Details.UserNotIntegrator]: {
+    friendlyMessage: 'You must be an integrator',
+    technichalReason: 'The user organization type is not integrator',
+  },
+
+  [Details.UserNotEndUser]: {
+    friendlyMessage: 'You must be an end user',
+    technichalReason: 'The user organization type is not end user',
+  },
+
+  [Details.UserIdParamMissing]: {
+    friendlyMessage: 'User Id was not found',
+    technichalReason: 'The userId was missing from the req.params[userId]',
+  },
+
+  [Details.UserIdIsNotCurrentUser]: {
+    friendlyMessage: 'User Id is not current user',
+    technichalReason: 'The userId in the params is not the current user',
+  },
 };
