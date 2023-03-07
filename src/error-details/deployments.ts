@@ -96,4 +96,21 @@ export const deploymentsErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'Deployment by id not found by param',
     technichalReason: 'The deployment id was not found in the url param',
   },
+
+  [Details.DeploymentEnvironmentNotFoundInDb]: {
+    friendlyMessage: 'Deployment environment not found',
+    technichalReason:
+      'The deployment.features.remoteConnect.environment was a falsy value',
+  },
+
+  [Details.ProxyLogsStartTimeGreaterThanEndTime]: {
+    friendlyMessage: 'Start time is greater than end time',
+    technichalReason:
+      'The start time was greater than the end time in the proxy logs request',
+  },
+
+  [Details.DeploymentIsAlreadyInUse]: {
+    friendlyMessage: 'Deployment already in use by another organization',
+    technichalReason: 'The deployment id was found in another connection',
+  },
 };

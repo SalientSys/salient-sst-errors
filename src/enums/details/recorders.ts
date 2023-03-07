@@ -1,1 +1,4 @@
-export const Recorders = ['RecordersMissingFromLocals'] as const;
+export const Recorders = [
+  'RecordersMissingFromLocals',
+  'RecorderDoesNotBelongToDeployment',
+] as const;

@@ -57,4 +57,31 @@ export const notificationDetailsMap: IDetailsMap = {
     technichalReason:
       'The notification already exists in the database, this is a duplicate',
   },
+  [Details.NotificationByIdNotFoundInDb]: {
+    friendlyMessage: 'Notification was not found',
+    technichalReason:
+      'The notification by that id was not found in the database',
+  },
+
+  [Details.NotificationDoesNotBelongToUser]: {
+    friendlyMessage: 'Notification does not belong to user',
+    technichalReason: 'The notification does not belong to the user',
+  },
+
+  [Details.NotificationRequestorOrganizationIdMissingFromLocals]: {
+    friendlyMessage: 'Notification requestor organization id missing',
+    technichalReason:
+      'The notification requestor organization id was not found in the response.locals object',
+  },
+
+  [Details.NotificationRequestorIdMissingFromLocals]: {
+    friendlyMessage: 'Notification requestor id missing',
+    technichalReason:
+      'The notification requestor id was not found in the response.locals object',
+  },
+  [Details.NotificationAlreadyDeleted]: {
+    friendlyMessage: 'Notification has already been deleted',
+    technichalReason:
+      'The notification has already been deleted, and cannot be deleted again',
+  },
 };

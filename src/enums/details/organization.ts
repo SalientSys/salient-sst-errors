@@ -14,4 +14,8 @@ export const Organization = [
   'OrgConnectionNotFoundInDb',
   'OrganizationHasNoUsers',
   'LastAdminNotAllowedToLeaveOrg',
+  'OrganizationsNotAssociated',
+  'NoOrganizationsOfTypeInDb',
+  'OrganizationNameAlreadyExistsInDb',
+  'OrganizationRegistrationAlreadyInProgress',
 ] as const;
