@@ -24,4 +24,6 @@ export const User = [
   'UserNotIntegratorNorEndUser',
   'UserNotIntegrator',
   'UserNotEndUser',
+  'UserIdParamMissing',
+  'UserIdIsNotCurrentUser',
 ] as const;

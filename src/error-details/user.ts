@@ -142,4 +142,14 @@ export const usersErrorDetailsMap: IDetailsMap = {
     friendlyMessage: 'You must be an end user',
     technichalReason: 'The user organization type is not end user',
   },
+
+  [Details.UserIdParamMissing]: {
+    friendlyMessage: 'User Id was not found',
+    technichalReason: 'The userId was missing from the req.params[userId]',
+  },
+
+  [Details.UserIdIsNotCurrentUser]: {
+    friendlyMessage: 'User Id is not current user',
+    technichalReason: 'The userId in the params is not the current user',
+  },
 };
