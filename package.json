@@ -1,5 +1,5 @@
 {
-  "version": "1.0.17",
+  "version": "1.0.18-0",
   "name": "@salient-sys/scs-errors",
   "description": "Standardized and documented error handling for Salient Cloud Services",
   "main": "dist/index.js",
@@ -8,7 +8,8 @@
     "lint": "eslint src/**",
     "lint-fix": "eslint src/** --fix",
     "wt": "tsc -w",
-    "pre-release": "npm run build && npm version prerelease && npm publish"
+    "pre-release": "npm run build && npm version prerelease && npm publish",
+    "release": "npm run build && npm version patch && npm publish"
   },
   "files": [
     "/dist",
