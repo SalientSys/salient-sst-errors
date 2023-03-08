@@ -13,4 +13,5 @@ export const Gateway = [
   'ProxyStopFailed',
   'VpnOrProxyFailedToStart',
   'VpnOrProxyFailedToStop',
+  'FailedToFetchProxyLogs',
 ] as const;
