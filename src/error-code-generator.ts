@@ -1,6 +1,5 @@
 import { routeMap } from './routes-map';
 import { Middleware, RouteName } from './enums';
-
 /**
  * @returns Route: XXX  Middlware: XXXXX  Details:XXXXX
  *   Can be parsed using the parseErrorCode function
@@ -14,4 +13,5 @@ const generateErrorCode = (
 };
 
 const generateErrorOriginCode = (route: RouteName) => routeMap[route];
+
 export { generateErrorCode, generateErrorOriginCode };

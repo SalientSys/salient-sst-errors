@@ -75,4 +75,27 @@ export const organizationDetailsMap: IDetailsMap = {
     technichalReason:
       'The organization only has one admin user and they cannot leave the organization.',
   },
+
+  [Details.OrganizationsNotAssociated]: {
+    friendlyMessage: 'Organizations are not associated',
+    technichalReason: 'The organizations are not associated',
+  },
+
+  [Details.NoOrganizationsOfTypeInDb]: {
+    friendlyMessage: 'No organizations of that type were found',
+    technichalReason:
+      'No organizations of that type were found in the database',
+  },
+
+  [Details.OrganizationNameAlreadyExistsInDb]: {
+    friendlyMessage: 'Organization name already exists',
+    technichalReason:
+      'An organization with that name already exists in the database',
+  },
+
+  [Details.OrganizationRegistrationAlreadyInProgress]: {
+    friendlyMessage: 'Organization registration already in progress',
+    technichalReason:
+      'An organization registration is already in progress with this name',
+  },
 };

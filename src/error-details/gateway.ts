@@ -80,4 +80,9 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
     technichalReason:
       "The vpnState.status or proxyState.status was 'rejected' when attempting to start them",
   },
+  [Details.FailedToFetchProxyLogs]: {
+    friendlyMessage: 'Failed to fetch proxy logs',
+    technichalReason:
+      'The proxyService.getLogs function threw an error when attempting to fetch proxy logs',
+  },
 };

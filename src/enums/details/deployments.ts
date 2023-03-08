@@ -16,4 +16,7 @@ export const Deployments = [
   'DeploymentNotFoundInDb',
   'DeploymentSubParamNotFound',
   'DeploymentByIdNotFoundByParam',
+  'DeploymentEnvironmentNotFoundInDb',
+  'ProxyLogsStartTimeGreaterThanEndTime',
+  'DeploymentIsAlreadyInUse',
 ] as const;
