@@ -3,92 +3,108 @@ import { IDetailsMap } from '../interfaces';
 
 export const organizationDetailsMap: IDetailsMap = {
   [Details.OrganizationByUserIdNotFoundInDb]: {
-    friendlyMessage: 'You are not a member of an organization',
+    friendlyMessage:
+      'The action requires you to be a member of an organization. Either create an organization or join one to enable this action.',
     technichalReason:
       'organizationService.findByUserId did not return a truthy value',
   },
+
   [Details.OrganizationTypeNotSalient]: {
-    friendlyMessage: 'You are not a Salient organization',
+    friendlyMessage: 'The action requires you to be an SCS admin.',
     technichalReason:
       'The organization.organizationType was not OrganizationType.Other',
   },
 
   [Details.OrganizationTypeNotIntegrator]: {
-    friendlyMessage: 'You are not an Integrator organization',
+    friendlyMessage:
+      'The action requires you to be a member of an Integrator organization.',
     technichalReason:
       'The organization.organizationType was not OrganizationType.Integrator',
   },
 
   [Details.OrganizationTypeNotEndUser]: {
-    friendlyMessage: 'You are not an End User organization',
+    friendlyMessage:
+      'The action requires you to be a member of an Integrator organization. Either create an organization or join one to enable this action',
     technichalReason:
       'The organization.organizationType was not OrganizationType.EndUser',
   },
 
   [Details.OrganizationMissingFromLocals]: {
-    friendlyMessage: 'Server Failure',
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
     technichalReason:
       'The organization was missing from the res.locals[organization], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
   },
 
   [Details.OrgNotFoundWhenDeregisteringDeployment]: {
-    friendlyMessage: 'Server Failure',
+    friendlyMessage:
+      'The organization was not found for the deployment. Please contact support.',
     technichalReason:
-      'The organization was not found when deregistering a deployment',
+      'The organization was not found when deregistering a deployment, this only happens when we refrigerate a deployment and organizationsService.findDocumentByDeploymentId throws an error.',
   },
 
+  // TODO: delete!
   [Details.OrganizationByDeploymentIdNotFoundInDb]: {
-    friendlyMessage: 'Organization was not found for deployment',
+    friendlyMessage:
+      'The organization was not found for the deployment. Please contact support.',
     technichalReason:
       'The organization was not found in the database with that deployment Id',
   },
 
   [Details.OrgConnectionMissingFromLocals]: {
-    friendlyMessage: 'Organization connection was not found',
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
     technichalReason:
-      'The organization connection was missing from the res.locals[organizationConnection], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
+      'The organization connection was missing from the res.locals[object], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
   },
 
+  // TODO: will be replaces with something more specific
   [Details.FailedToSaveOrgConnection]: {
-    friendlyMessage: 'Failed to save organization connection',
+    friendlyMessage:
+      'Unable to process connection request. Please contact support.',
     technichalReason: 'orgConnection.save() threw an error',
   },
 
   [Details.OrganizationsAlreadyAssociated]: {
-    friendlyMessage: 'Organizations are already associated',
+    friendlyMessage:
+      'Connection request cannot be processed. Organizations are already connected.',
     technichalReason: 'The organizations are already associated',
   },
 
   [Details.OrgConnectionNotFoundInDb]: {
-    friendlyMessage: 'Organization connection was not found',
+    friendlyMessage:
+      'Organization connection does not exist. No further action required.',
     technichalReason:
       'The organization connection was not found in the database',
   },
 
   [Details.OrganizationHasNoUsers]: {
     friendlyMessage: 'Organization has no users',
-    technichalReason: 'The organization you passed in has no users',
+    technichalReason:
+      'The organization you passed in has no users. This should literally never happen, like seriously!.',
   },
 
   [Details.LastAdminNotAllowedToLeaveOrg]: {
-    friendlyMessage: "Cannot remove an organization's last admin",
+    friendlyMessage: 'An organization requires at least one admin',
     technichalReason:
       'The organization only has one admin user and they cannot leave the organization.',
   },
 
   [Details.OrganizationsNotAssociated]: {
-    friendlyMessage: 'Organizations are not associated',
+    friendlyMessage:
+      'The action cannot be completed because there is no connection between the organizations.',
     technichalReason: 'The organizations are not associated',
   },
 
   [Details.NoOrganizationsOfTypeInDb]: {
-    friendlyMessage: 'No organizations of that type were found',
+    friendlyMessage: 'No organizations of that type exist in the database.',
     technichalReason:
-      'No organizations of that type were found in the database',
+      'Chaos has ensued, find shelter! All organizations have been deleted from the database.',
   },
 
   [Details.OrganizationNameAlreadyExistsInDb]: {
-    friendlyMessage: 'Organization name already exists',
+    friendlyMessage:
+      'Organization name must be unique. Please update and try again.',
     technichalReason:
       'An organization with that name already exists in the database',
   },

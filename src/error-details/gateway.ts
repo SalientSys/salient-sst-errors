@@ -2,20 +2,15 @@ import { Details } from '../enums';
 import { IDetailsMap } from '../interfaces';
 
 export const gatewayErrorDetailsMap: IDetailsMap = {
-  [Details.GatewayFailure]: {
-    friendlyMessage: 'Gateway failure',
-    technichalReason:
-      "Attempted to do startStopProxy and startStopVpn but the status for both was 'rejected'",
-  },
-
   [Details.DuplicateGateway]: {
-    friendlyMessage: 'Gateway already exists',
+    friendlyMessage:
+      'Unable to proccess request. Duplicate gateway found. Please contact support.',
     technichalReason:
       'gatewayId was found in the database through gatewayDeploymentService.findById();',
   },
 
   [Details.Env0AccountCreationFailedToStart]: {
-    friendlyMessage: 'Account creation failed to start',
+    friendlyMessage: '',
     technichalReason:
       'Account Creation Response came back a string or lastDeploymentLog did not have an id',
   },
@@ -38,7 +33,7 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
   },
 
   [Details.UpdateGatewayVpnAndSecretFailed]: {
-    friendlyMessage: 'Update gateway vpn and secret failed',
+    friendlyMessage: 'Update gateway vpn and secret failed.',
     technichalReason:
       "The updateGatewayVpnAndSecret function's try block threw an error",
   },
@@ -50,38 +45,39 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
   },
 
   [Details.VpnStartFailed]: {
-    friendlyMessage: 'Vpn could not start',
+    friendlyMessage: 'The vpn server failed to start up.',
     technichalReason: "The startVpn function's status was 'rejected'",
   },
 
   [Details.VpnStopFailed]: {
-    friendlyMessage: 'Vpn could not stop',
+    friendlyMessage: 'The vpn server failed to stop.',
     technichalReason: "The stopVpn function's status was 'rejected'",
   },
 
   [Details.ProxyStartFailed]: {
-    friendlyMessage: 'Proxy could not start',
+    friendlyMessage: 'The proxy server failed to start.',
     technichalReason: "The startProxy function's status was 'rejected'",
   },
 
   [Details.ProxyStopFailed]: {
-    friendlyMessage: 'Proxy could not stop',
+    friendlyMessage: 'The proxy server failed to stop.',
     technichalReason: "The stopProxy function's status was 'rejected'",
   },
 
   [Details.VpnOrProxyFailedToStop]: {
-    friendlyMessage: 'Vpn or proxy could not stop',
+    friendlyMessage: 'The vpn or proxy server failed to stop.',
     technichalReason:
       "The vpnState.status or proxyState.status was 'rejected' when attempting to stop them",
   },
 
   [Details.VpnOrProxyFailedToStart]: {
-    friendlyMessage: 'Vpn or proxy could not start',
+    friendlyMessage: 'The vpn or proxy server failed to start.',
     technichalReason:
       "The vpnState.status or proxyState.status was 'rejected' when attempting to start them",
   },
+
   [Details.FailedToFetchProxyLogs]: {
-    friendlyMessage: 'Failed to fetch proxy logs',
+    friendlyMessage: 'Failed to fetch proxy logs.',
     technichalReason:
       'The proxyService.getLogs function threw an error when attempting to fetch proxy logs',
   },
