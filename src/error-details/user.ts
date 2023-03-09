@@ -118,21 +118,21 @@ export const usersErrorDetailsMap: IDetailsMap = {
 
   [Details.RegistrationAccessCodeExpired]: {
     friendlyMessage:
-      'Sorry, it seems like the link you are trying to use has expired. Please request a new link to register.',
+      'The registration link you are accessing expired. Please complete the registration process again.',
     technichalReason: 'The registration access code has expired',
   },
 
   [Details.UserActiveRegistrationMissing]: {
     friendlyMessage:
-      'Sorry, it seems like your account needs to be in the proccess of registration to perform this action. Please complete the registration process to proceed.',
+      'The account associated with this activation link does not exist. Please complete the registration process again.',
     technichalReason:
       'The user.registration.activeRegistration was not found in the database',
   },
 
   [Details.UserNotInRequestedOrganization]: {
-    friendlyMessage:
-      'This action requires you to be a member of the requested organization to perform this action. ',
-    technichalReason: 'The user does not belong to the requested organization',
+    friendlyMessage: 'You do not have permissions to perform this action.',
+    technichalReason:
+      "User's organization does not match organization you are trying to modify. This may be malicious.",
   },
 
   [Details.UserRegistrationVerificationAlreadyInProgress]: {
@@ -155,7 +155,7 @@ export const usersErrorDetailsMap: IDetailsMap = {
 
   [Details.UserNotEndUser]: {
     friendlyMessage:
-      'The action requires you to be a member of an Integrator organization. Either create an organization or join one to enable this action',
+      'The action requires you to be a member of an End User organization.',
     technichalReason: 'The user organization type is not end user',
   },
 

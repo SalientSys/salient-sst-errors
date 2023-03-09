@@ -4,7 +4,7 @@ import { IDetailsMap } from '../interfaces';
 export const notificationDetailsMap: IDetailsMap = {
   [Details.NotificationMissingFromLocals]: {
     friendlyMessage:
-      'A critical server error has occurred. Please contact support.',
+      'The request could not be completed because the notification was not found in our system.',
     technichalReason:
       'The notification was missing from the res.locals[notification], if you have the middlewares setup in the correct order, this should be a server failure of some sort',
   },

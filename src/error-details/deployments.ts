@@ -23,7 +23,7 @@ export const deploymentsErrorDetailsMap: IDetailsMap = {
   },
   [Details.DeploymentAlreadyRegisteredInDifferentOrg]: {
     friendlyMessage:
-      'This deployment is already registered in different organization. Please disconnect the deployment and try again.',
+      'This deployment is already registered in different organization. If you believe this is an error, please contact support.',
     technichalReason:
       'The deployment id was found in another organization other than the current user organization',
   },
