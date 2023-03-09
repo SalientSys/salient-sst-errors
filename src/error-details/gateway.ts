@@ -2,20 +2,15 @@ import { Details } from '../enums';
 import { IDetailsMap } from '../interfaces';
 
 export const gatewayErrorDetailsMap: IDetailsMap = {
-  [Details.GatewayFailure]: {
-    friendlyMessage: 'Gateway failure',
-    technichalReason:
-      "Attempted to do startStopProxy and startStopVpn but the status for both was 'rejected'",
-  },
-
   [Details.DuplicateGateway]: {
-    friendlyMessage: 'Gateway already exists',
+    friendlyMessage:
+      'Unable to proccess request. Duplicate gateway found. Please contact support.',
     technichalReason:
       'gatewayId was found in the database through gatewayDeploymentService.findById();',
   },
 
   [Details.Env0AccountCreationFailedToStart]: {
-    friendlyMessage: 'Account creation failed to start',
+    friendlyMessage: '',
     technichalReason:
       'Account Creation Response came back a string or lastDeploymentLog did not have an id',
   },
@@ -80,6 +75,7 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
     technichalReason:
       "The vpnState.status or proxyState.status was 'rejected' when attempting to start them",
   },
+
   [Details.FailedToFetchProxyLogs]: {
     friendlyMessage: 'Failed to fetch proxy logs',
     technichalReason:

@@ -11,12 +11,12 @@ import { notificationDetailsMap } from './error-details/notification';
 import { IDetailsMap } from './interfaces';
 
 export const detailsMap: IDetailsMap = {
-  ...sharedErrorDetailsMap,
-  ...authErrorDetails,
-  ...organizationDetailsMap,
-  ...usersErrorDetailsMap,
-  ...deploymentsErrorDetailsMap,
-  ...recordersErrorDetailsMap,
+  ...sharedErrorDetailsMap, //DONE
+  ...authErrorDetails, //DONE
+  ...organizationDetailsMap, //DONE
+  ...usersErrorDetailsMap, //DONE
+  ...deploymentsErrorDetailsMap, //DONE
+  ...recordersErrorDetailsMap, // DONE
   ...gatewayErrorDetailsMap,
   ...notificationDetailsMap,
 };

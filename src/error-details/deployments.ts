@@ -3,114 +3,132 @@ import { IDetailsMap } from '../interfaces';
 
 export const deploymentsErrorDetailsMap: IDetailsMap = {
   [Details.SecretTokenNotFound]: {
-    friendlyMessage: 'Secret not found',
+    friendlyMessage:
+      'Could not validate the environment secret. Token not found.',
     technichalReason:
       'The secret was not found in the req.headers[REQUEST_HEADER_SECRET_KEY]',
   },
   [Details.InvalidSecretToken]: {
-    friendlyMessage: 'Secret is not valid',
+    friendlyMessage:
+      'Could not validate the environment secret. Token not valid.',
     technichalReason:
       'The secret did not path through the validateSecretToken function with a truthy value',
   },
 
   [Details.DeploymentIdMissingFromRequestBody]: {
-    friendlyMessage: 'Deployment id missing from body',
+    friendlyMessage:
+      'A Critical Server error has occurred. Please contact support.',
     technichalReason:
       'The deployment id was not found in neither the req.body.deploymentId nor req.body.managementServerGuid',
   },
   [Details.DeploymentAlreadyRegisteredInDifferentOrg]: {
-    friendlyMessage: 'Deployment already registered in different organization',
+    friendlyMessage:
+      'This deployment is already registered in different organization. Please disconnect the deployment and try again.',
     technichalReason:
       'The deployment id was found in another organization other than the current user organization',
   },
 
   [Details.DeploymentIdAlreadyCachedInMemory]: {
-    friendlyMessage: 'Deployment id already cached in memory',
+    friendlyMessage: 'The deployment registration is already in progress.',
     technichalReason: 'The deployment id was found in the cache',
   },
 
   [Details.RegisteredDeploymentFound]: {
-    friendlyMessage: 'Registered deployment found',
+    friendlyMessage:
+      'The deployment you are trying to register is already registered.',
     technichalReason:
       'The deployment id was found in the database and the isRegistered flag was set to true',
   },
 
   [Details.MissingDeploymentIdParam]: {
-    friendlyMessage: 'Deployment by id not found by param',
+    friendlyMessage:
+      'Deployment was not found. Verify the url is correct or contact support.',
     technichalReason:
       'The deployment id was not found in the database by the req.params.deploymentId',
   },
 
   [Details.DeploymentByIdNotFoundByBody]: {
-    friendlyMessage: 'Deployment by id was not found by body',
+    friendlyMessage:
+      'Deployment was not found. Verify the url is correct or contact support.',
     technichalReason:
       'The deployment id was not found in the database by the req.body.deploymentId',
   },
 
   [Details.DeploymentNotRegistered]: {
-    friendlyMessage: 'Deployment not registered',
-    technichalReason:
-      'The deployment id was not found in the database or the isRegistered flag was set to false',
+    friendlyMessage:
+      'Unable to process request. Deployment is not registered. Please contact support.',
+    technichalReason: "The deployment's isRegistered flag was set to false",
   },
 
   [Details.DeploymentMissingFromLocals]: {
-    friendlyMessage: 'Deployment missing',
+    friendlyMessage:
+      'A Critical Server error has occurred. Please contact support.',
     technichalReason:
       'responseLocals.getDeployment(deploymentId, res) returned a falsy value',
   },
 
   [Details.DeploymentIdNotFoundInConnectedOrgs]: {
-    friendlyMessage: 'Deployment id not found in connected organizations',
+    friendlyMessage:
+      'The action cannot be completed because the deployment is not connected to your organization.',
     technichalReason:
       'The deployment id was not found in the connected organizations',
   },
 
   [Details.FailedToSaveDeployment]: {
-    friendlyMessage: 'Failed to save deployment',
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support',
     technichalReason:
       'deployment.save() threw an error while trying to save the deployment',
   },
 
   [Details.FailedToUpdateDeployment]: {
-    friendlyMessage: 'Failed to update deployment',
+    friendlyMessage:
+      'A critical server error occurred when updating the object. Please try again or contact support if the problem persists.',
     technichalReason:
       'deploymentService.updateById threw an error while trying to update the deployment',
   },
 
   [Details.DeploymentNotFoundInDb]: {
-    friendlyMessage: 'Deployment not found in database',
+    friendlyMessage:
+      'A critical server error has occurred when updating the object. Please contact support if the problem persists.',
     technichalReason: 'The deployment by that id was not found in the database',
   },
   [Details.DeploymentSubParamNotFound]: {
-    friendlyMessage: 'The deployment details was not found',
+    friendlyMessage:
+      'Invalid route request. The object requested may not exist. Verify the url is correct.',
     technichalReason:
       'The sub param passed in the route was not found in the deployment object',
   },
 
   [Details.DeploymentByIdNotFoundInDb]: {
-    friendlyMessage: 'Deployment by that id not found',
+    friendlyMessage:
+      'Unable to process request. Deployment was not found. Please contact support.',
     technichalReason: 'The deployment by that id was not found in the database',
   },
 
   [Details.DeploymentByIdNotFoundByParam]: {
-    friendlyMessage: 'Deployment by id not found by param',
+    friendlyMessage:
+      'Unable to process request. Deployment was not found. Please contact support.',
     technichalReason: 'The deployment id was not found in the url param',
   },
 
   [Details.DeploymentEnvironmentNotFoundInDb]: {
-    friendlyMessage: 'Deployment environment not found',
+    friendlyMessage:
+      'Unable to process request. Deployment environment was not found. Please contact support.',
     technichalReason:
       'The deployment.features.remoteConnect.environment was a falsy value',
   },
 
   [Details.ProxyLogsStartTimeGreaterThanEndTime]: {
-    friendlyMessage: 'Start time is greater than end time',
+    friendlyMessage:
+      'Unable to process request. Please verify the url is correct or contact support',
     technichalReason:
       'The start time was greater than the end time in the proxy logs request',
   },
 
   [Details.DeploymentIsAlreadyInUse]: {
-    friendlyMessage: 'Deployment already in use by another organization',
-    technichalReason: 'The deployment id was found in another connection',
+    friendlyMessage:
+      'The deployment you are trying to add is already added to another one of your connections. Please disconnect the deployment from the other organization before trying again.',
+    technichalReason: 'The deployment id was found in another connection.',
   },
 };
