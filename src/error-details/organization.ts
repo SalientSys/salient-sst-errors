@@ -6,7 +6,7 @@ export const organizationDetailsMap: IDetailsMap = {
     friendlyMessage:
       'The action requires you to be a member of an organization. Either create an organization or join one to enable this action.',
     technichalReason:
-      'organizationService.findByUserId did not return a truthy value',
+      'organizationService.findByUserId() did not return a truthy value',
   },
 
   [Details.OrganizationTypeNotSalient]: {
@@ -113,5 +113,18 @@ export const organizationDetailsMap: IDetailsMap = {
     friendlyMessage: 'Organization registration already in progress',
     technichalReason:
       'An organization registration is already in progress with this name',
+  },
+
+  [Details.OrganizationByIdNotFoundInDb]: {
+    friendlyMessage:
+      'The action requires you to be a member of an organization. Either create an organization or join one to enable this action.',
+    technichalReason:
+      'organizationService.findById() did not return a truthy value',
+  },
+
+  [Details.FailedToDeleteOrgConnection]: {
+    friendlyMessage:
+      'Unable to process connection request. Please contact support.',
+    technichalReason: 'orgConnection.delete() threw an error',
   },
 };

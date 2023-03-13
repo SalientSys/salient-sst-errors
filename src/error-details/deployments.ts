@@ -14,7 +14,6 @@ export const deploymentsErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The secret did not path through the validateSecretToken function with a truthy value',
   },
-
   [Details.DeploymentIdMissingFromRequestBody]: {
     friendlyMessage:
       'A Critical Server error has occurred. Please contact support.',
