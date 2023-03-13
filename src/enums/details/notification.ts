@@ -10,7 +10,6 @@ export const Notification = [
   'RecipientOrganizationMissingFromLocals',
   'NotificationAlreadyExists',
   'NotificationByIdNotFoundInDb',
-  'NotificationDoesNotBelongToUser',
   'NotificationRequestorOrganizationIdMissingFromLocals',
   'NotificationRequestorIdMissingFromLocals',
   'NotificationAlreadyDeleted',

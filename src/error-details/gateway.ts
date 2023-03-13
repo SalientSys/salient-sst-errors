@@ -81,4 +81,41 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The proxyService.getLogs function threw an error when attempting to fetch proxy logs',
   },
+
+  [Details.RemoteConnectInfoByIdNotFoundInDb]: {
+    friendlyMessage:
+      'A critical server error has occured. Please contact support.',
+    technichalReason:
+      'The remoteConnectService.findById returned a falsy value.',
+  },
+
+  [Details.AccountIdMissingFromDeployment]: {
+    friendlyMessage:
+      'A critical server error has occured. Please contact support.',
+    technichalReason: 'The deployment did not have an accountId.',
+  },
+
+  [Details.AccountEnvironmentIdMissingFromDeployment]: {
+    friendlyMessage:
+      'A critical server error has occured. Please contact support.',
+    technichalReason: 'The deployment did not have an accountEnvironmentId.',
+  },
+
+  [Details.GatewayEnvironmentIdMissingFromDeployment]: {
+    friendlyMessage:
+      'A critical server error has occured. Please contact support.',
+    technichalReason: 'The deployment did not have a gatewayEnvironmentId.',
+  },
+  [Details.ProxyHostMissingFromDeployment]: {
+    friendlyMessage:
+      'A critical server error has occured. Please contact support.',
+    technichalReason: 'The deployment did not have a proxyHost.',
+  },
+
+  [Details.GatewayFailure]: {
+    friendlyMessage:
+      'A critical server error has occured when establishing remote-access. Please contact support.',
+    // TODO: the reason this is so vague is because this function is used anytime something goes wrong. And we're going to be replacing that soon.
+    technichalReason: 'The handleRemoteConnectError was called.',
+  },
 };

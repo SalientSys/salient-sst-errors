@@ -14,4 +14,9 @@ export const Gateway = [
   'VpnOrProxyFailedToStart',
   'VpnOrProxyFailedToStop',
   'FailedToFetchProxyLogs',
+  'RemoteConnectInfoByIdNotFoundInDb',
+  'AccountIdMissingFromDeployment',
+  'AccountEnvironmentIdMissingFromDeployment',
+  'GatewayEnvironmentIdMissingFromDeployment',
+  'ProxyHostMissingFromDeployment',
 ] as const;

@@ -8,4 +8,10 @@ export const recordersErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The recorders were not found in the response.locals object',
   },
+
+  [Details.RecorderDoesNotBelongToDeployment]: {
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
+    technichalReason: 'The recorder does not belong to the deployment',
+  },
 };
