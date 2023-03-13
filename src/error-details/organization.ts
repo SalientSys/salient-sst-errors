@@ -6,7 +6,7 @@ export const organizationDetailsMap: IDetailsMap = {
     friendlyMessage:
       'The action requires you to be a member of an organization. Either create an organization or join one to enable this action.',
     technichalReason:
-      'organizationService.findByUserId did not return a truthy value',
+      'organizationService.findByUserId() did not return a truthy value',
   },
 
   [Details.OrganizationTypeNotSalient]: {
@@ -119,7 +119,7 @@ export const organizationDetailsMap: IDetailsMap = {
     friendlyMessage:
       'The action requires you to be a member of an organization. Either create an organization or join one to enable this action.',
     technichalReason:
-      'organizationService.findById did not return a truthy value',
+      'organizationService.findById() did not return a truthy value',
   },
 
   [Details.FailedToDeleteOrgConnection]: {

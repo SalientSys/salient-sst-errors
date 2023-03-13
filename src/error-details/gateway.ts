@@ -86,7 +86,7 @@ export const gatewayErrorDetailsMap: IDetailsMap = {
     friendlyMessage:
       'A critical server error has occured. Please contact support.',
     technichalReason:
-      'The remoteConnectService.findById returned a falsy value.',
+      'The remoteConnectService.findById() returned a falsy value.',
   },
 
   [Details.AccountIdMissingFromDeployment]: {
