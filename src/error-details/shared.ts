@@ -110,4 +110,18 @@ export const sharedErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The updateService.updateById returned undefined when trying to update the object',
   },
+
+  [Details.MongooseCriticalError]: {
+    friendlyMessage:
+      'A critical server error occurred. Please try again or contact support if the problem persists.',
+    technichalReason:
+      'A mongoose error was thrown. Check the logs for more info',
+  },
+
+  [Details.BcryptError]: {
+    friendlyMessage:
+      'A critical server error occurred. Please try again or contact support if the problem persists.',
+    technichalReason:
+      'A bcrypt error was thrown. This should likely never happen.',
+  },
 };

@@ -69,4 +69,46 @@ export const notificationDetailsMap: IDetailsMap = {
     technichalReason:
       'The notification has already been deleted, and cannot be deleted again',
   },
+
+  [Details.NotificationAlreadyInProgress]: {
+    friendlyMessage:
+      'The notification you are trying to send is already in progress. Please wait for the notification to complete before sending it again.',
+    technichalReason:
+      'The notification has already been sent, and cannot be sent again',
+  },
+
+  [Details.AccessCodeMissingFromLocals]: {
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
+    technichalReason:
+      'The access code was not found in the response.locals object. Cannot send email!',
+  },
+
+  [Details.FailedToSendPasswordResetEmail]: {
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
+    technichalReason:
+      'The email failed to send. This is a server error, and should never happen. Check logs for more information.',
+  },
+
+  [Details.FailedToSendOrganizationAdminInviteEmail]: {
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
+    technichalReason:
+      'The email failed to send. This is a server error, and should never happen. Check logs for more information.',
+  },
+
+  [Details.FailedToSendUserRegistrationVerificationEmail]: {
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
+    technichalReason:
+      'The email failed to send. This is a server error, and should almost never happen. Check logs for more information.',
+  },
+
+  [Details.FailedToSendUserRegistrationReverificationEmail]: {
+    friendlyMessage:
+      'A critical server error has occurred. Please contact support.',
+    technichalReason:
+      'The email failed to send. This is a server error, and should almost never happen. Check logs for more information.',
+  },
 };
