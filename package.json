@@ -1,5 +1,5 @@
 {
-  "version": "1.0.20",
+  "version": "1.0.21-0",
   "name": "@salient-sys/scs-errors",
   "description": "Standardized and documented error handling for Salient Cloud Services",
   "main": "dist/index.js",
