@@ -86,28 +86,28 @@ export const notificationDetailsMap: IDetailsMap = {
 
   [Details.FailedToSendPasswordResetEmail]: {
     friendlyMessage:
-      'A critical server error has occurred. Please contact support.',
+      'Unable to deliver the email for a password reset. Try again later or contact support.',
     technichalReason:
       'The email failed to send. This is a server error, and should never happen. Check logs for more information.',
   },
 
   [Details.FailedToSendOrganizationAdminInviteEmail]: {
     friendlyMessage:
-      'A critical server error has occurred. Please contact support.',
+      'Organization invite sent and will appear on their dashboard, but an email could not be delivered to the recipient.',
     technichalReason:
       'The email failed to send. This is a server error, and should never happen. Check logs for more information.',
   },
 
   [Details.FailedToSendUserRegistrationVerificationEmail]: {
     friendlyMessage:
-      'A critical server error has occurred. Please contact support.',
+      'Unable to deliver the email for registration verification. Try again later or contact support.',
     technichalReason:
       'The email failed to send. This is a server error, and should almost never happen. Check logs for more information.',
   },
 
   [Details.FailedToSendUserRegistrationReverificationEmail]: {
     friendlyMessage:
-      'A critical server error has occurred. Please contact support.',
+      'Unable to deliver the email for registration verification. Try again later or contact support.',
     technichalReason:
       'The email failed to send. This is a server error, and should almost never happen. Check logs for more information.',
   },
