@@ -13,4 +13,10 @@ export const Notification = [
   'NotificationRequestorOrganizationIdMissingFromLocals',
   'NotificationRequestorIdMissingFromLocals',
   'NotificationAlreadyDeleted',
+  'NotificationAlreadyInProgress',
+  'AccessCodeMissingFromLocals',
+  'FailedToSendPasswordResetEmail',
+  'FailedToSendOrganizationAdminInviteEmail',
+  'FailedToSendUserRegistrationVerificationEmail',
+  'FailedToSendUserRegistrationReverificationEmail',
 ] as const;

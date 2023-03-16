@@ -15,4 +15,6 @@ export const Shared = [
   'RecipientMissingFromLocals',
   'SuspiciousRequestor',
   'FailedToUpdateObject',
+  'MongooseCriticalError',
+  'BcryptError',
 ] as const;
