@@ -99,5 +99,6 @@
   GetDeploymentProxyLogsHandler = 10097,
   RestartDeploymentVpnHandler = 10098,
   GetDeploymentVpnUsersHandler = 10099,
-  NewUserHandler = 10100,
+  GetRecipientMiddleware = 10100,
+  VerifyNotificationDeleted = 10101,
 }
