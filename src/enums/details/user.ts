@@ -26,4 +26,5 @@ export const User = [
   'UserNotEndUser',
   'UserIdParamMissing',
   'UserIdIsNotCurrentUser',
+  'CommercialEmailFlagAccessCodeInvalid',
 ] as const;

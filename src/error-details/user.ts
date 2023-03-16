@@ -170,4 +170,11 @@ export const usersErrorDetailsMap: IDetailsMap = {
       'There was an error processing the request. Verify the url is correct or contact support.',
     technichalReason: 'The userId in the params is not the current user',
   },
+
+  [Details.CommercialEmailFlagAccessCodeInvalid]: {
+    friendlyMessage:
+      'There was an error processing the request. Verify the url is correct or contact support.',
+    technichalReason:
+      'The access code did not match the access code in the database',
+  },
 };
