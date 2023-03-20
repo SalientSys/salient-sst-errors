@@ -124,4 +124,11 @@ export const sharedErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'A bcrypt error was thrown. This should likely never happen.',
   },
+
+  [Details.GoogleMapsServicesApiKeyMissing]: {
+    friendlyMessage:
+      'A critical server error occurred. Please try again or contact support if the problem persists.',
+    technichalReason:
+      'The google maps services api key is missing from the environment variables.',
+  },
 };

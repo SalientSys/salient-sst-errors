@@ -33,7 +33,7 @@ export const notificationDetailsMap: IDetailsMap = {
 
   [Details.RecipientOrganizationMissingFromLocals]: {
     friendlyMessage:
-      'A critical server error has occurred. Please contact support.',
+      'Unable to process request. The recipient organization was not found.',
     technichalReason:
       'The recipient organization was not found in the response.locals object',
   },

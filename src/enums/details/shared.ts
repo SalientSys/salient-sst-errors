@@ -17,4 +17,5 @@ export const Shared = [
   'FailedToUpdateObject',
   'MongooseCriticalError',
   'BcryptError',
+  'GoogleMapsServicesApiKeyMissing',
 ] as const;
