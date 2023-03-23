@@ -9,7 +9,8 @@
     "lint-fix": "eslint src/** --fix",
     "wt": "tsc -w",
     "pre-release": "npm run build && npm version prerelease && npm publish",
-    "release": "npm run build && npm version patch && npm publish"
+    "release": "npm run build && npm version patch && npm publish",
+    "update-to-latest": "npm version --allow-same-version --no-git-tag $(npm view @salient-sys/scs-errors version)"
   },
   "files": [
     "/dist",
