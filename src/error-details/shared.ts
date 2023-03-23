@@ -131,4 +131,11 @@ export const sharedErrorDetailsMap: IDetailsMap = {
     technichalReason:
       'The google maps services api key is missing from the environment variables.',
   },
+
+  [Details.RecipientAlreadyInOrganization]: {
+    friendlyMessage:
+      'Unable to proccess request. The recipient is already a member of an organization.',
+    technichalReason:
+      'The recipientOrganization was found in the response.locals. It should not be there if the recipient is not already in an organization.',
+  },
 };
