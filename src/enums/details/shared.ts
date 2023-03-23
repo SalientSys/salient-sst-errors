@@ -18,4 +18,5 @@ export const Shared = [
   'MongooseCriticalError',
   'BcryptError',
   'GoogleMapsServicesApiKeyMissing',
+  'RecipientAlreadyInOrganization',
 ] as const;
